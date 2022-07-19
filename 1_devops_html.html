@@ -1,0 +1,268 @@
+<!---https://techntuts.com/html/devops/1_DevOps.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0 DevOps Tutorial</title>
+</head>
+<body>
+    <div style="background-color: #f0f0f0; padding: 5px 10px; border: 1px solid green; border-radius: 10px;">
+        <h6 style="margin-top: 20px;">DevOps Tutorial Outline:-</h6>
+        <ol>
+            <li style="background-color: yellow;"><strong><a title="DevOps-1: Introduction to DevOps" href="../../../story/DevOps-Introduction-to-DevOps" target="_blank">DevOps-1: Introduction to DevOps</a></strong></li>
+            <li><strong><a title="DevOps-2:&nbsp;Learn about Linux" href="../../../story/DevOps-Learn-about-Linux" target="_blank">DevOps-2:&nbsp;Learn about Linux</a></strong></li>
+            <li><strong><a title="DevOps-3:&nbsp;Version Control System [Git]" href="../../../story/DevOps-Version-Control-System-Git" target="_blank">DevOps-3:&nbsp;Version Control System [Git]</a></strong></li>
+            <li><strong><a title="DevOps-4:&nbsp;Source Code Management (SCM) [Github]" href="../../../story/DevOps-Source-Code-Management-SCM-Github" target="_blank">DevOps-4:&nbsp;Source Code Management (SCM) [Github]</a></strong></li>
+            <li><strong><a title="DevOps-5:&nbsp;CI/CD [Jenkins]" href="../../../story/DevOps--CI-CD-Jenkins" target="_blank">DevOps-5:&nbsp;CI/CD [Jenkins]</a></strong></li>
+            <li><strong><a title="DevOps-6:&nbsp;Software and Automation Testing Framework [Selenium]" href="../../../story/DevOps-Software-and-Automation-Testing-Framework-Selenium" target="_blank">DevOps-6:&nbsp;Software and Automation Testing Framework [Selenium]</a></strong></li>
+            <li><strong><a title="DevOps-7:&nbsp;Configuration Management [Ansible]" href="../../../story/DevOps-Configuration-Management-Ansible" target="_blank">DevOps-7:&nbsp;Configuration Management [Ansible]</a></strong></li>
+            <li><strong><a title="DevOps-8:&nbsp;Containerization [Docker]" href="../../../story/DevOps-Containerization-Docker" target="_blank">DevOps-8:&nbsp;Containerization [Docker]</a></strong></li>
+            <li><strong><a title="DevOps-9:&nbsp;Continuous Monitoring [Nagios]" href="../../../story/DevOps-Continuous-Monitoring-Nagios" target="_blank">DevOps-9:&nbsp;Continuous Monitoring [Nagios]</a></strong></li>
+            <li><strong><a title="DevOps-10:&nbsp;Continuous Orchestration [Kubernetes]" href="../../../story/DevOps-Continuous-Orchestration-Kubernetes" target="_blank">DevOps-10:&nbsp;Continuous Orchestration [Kubernetes]</a></strong></li>
+        </ol>
+    </div>
+
+    <hr style="border: 1px solid inset;">
+
+    <h6 style="margin-top: 20px;">DevOps-1: Introduction to DevOps - Outline</h6>
+    <ul style="list-style: none;">
+        <li><span>1.1. </span> <strong><a href="#section_1_1">DevOps Overview</a></strong></li>
+        <li><span>1.2. </span> <strong><a href="#section_1_2">Traditional Software Development Approach: Waterfall Model</a></strong></li>
+        <li><span>1.3. </span> <strong><a href="#section_1_3">Traditional Software Development Approach: Agile Model</a></strong></li>
+        <li><span>1.4. </span> <strong><a href="#section_1_4">Relationship Between Agile and DevOps</a></strong></li>
+        <li><span>1.5. </span> <strong><a href="#section_1_5">Principles of DevOps</a></strong></li>
+        <li><span>1.6. </span> <strong><a href="#section_1_6">DevOps Lifecycle</a></strong></li>
+        <li><span>1.7. </span> <strong><a href="#section_1_7">Categories of DevOps Tools</a></strong></li>
+        <li><span>1.8. </span> <strong><a href="#section_1_8">Benefits of DevOps</a></strong></li>
+        <li><span>1.9. </span> <strong><a href="#section_1_9">DevSecOps</a></strong></li>
+        <li><span>1.10. </span> <strong><a href="#section_1_10">DevOps on Cloud</a></strong></li>
+        <li><span>1.11. </span> <strong><a href="#section_1_11">Quick Recap</a></strong></li>
+    </ul>
+
+    <hr style="border: 1px solid inset;">
+
+    <h6 id="section_1_1">1.1. DevOps Overview</h6>
+    <p>DevOps is a set of practice that aims to provide superior quality software quickly by integrating the processes between the development and the operation teams.</p>
+    <ul>
+        <li>DevOps is an agile relationship between development and IT operations.</li>
+        <li>DevOps is the abbreviation for Development and Operations.</li>
+        <li>Development includes Plan, Create, Verify and Package</li>
+        <li>Operations include Release, Configure and Monitor.</li>
+    </ul>
+    <img src="https://techntuts.com/html/devops/1_DevOps_files/image001.jpg" alt="DevOps Overview" style="width:100%" >
+
+    
+    <p><strong>DevOps aims at:</strong></p>
+    <ul>
+        <li>Shortens development life cycle</li>
+        <li>Provides features and fixes</li>
+        <li>Provides regular updates</li>
+    </ul>
+    <img src="https://techntuts.com/html/devops/1_DevOps_files/image002.jpg" alt="DevOps aims" style="width:100%" >
+
+
+    <h6 id="section_1_2">1.2. Traditional Software Development Approach: Waterfall Model</h6>
+    <p>The traditional software development approaches are comprised of a sequence of activities.</p>
+    <img src="https://techntuts.com/html/devops/1_DevOps_files/image003.jpg" alt="sequence of activities" style="width:100%" >
+    <p><strong>Software Development Life Cycle (SDLC) two approach are,</strong></p> 
+    <ul>
+        <li>Waterfall Model</li>
+        <li>Agile Model</li>
+    </ul>
+
+    <p><strong>Waterfall Model</strong></p> 
+    <p>The waterfall model is a traditional software development model that uses a linear and sequential approach of software development.</p>
+    <img src="https://techntuts.com/html/devops/1_DevOps_files/image004.jpg" alt="Waterfall Model" style="width:100%" >
+    <p><strong>Advantages:</strong></p>
+    <ul>
+        <li>Easy to use</li>
+        <li>Cost Effective</li>
+        <li>Time saving</li>
+        <li>Easy testing</li>
+        <li>Suitable for small project</li>
+        <li>Managerial control</li>
+    </ul>
+    <p><strong>Disadvantages:</strong></p>
+    <ul>
+        <li>Risky and uncertain</li>
+        <li>Not suitable for complex project</li>
+        <li>Final product available only at the end</li>
+        <li>Not suitable for project with changing requirement</li>
+        <li>Difficult to make changes in the testing phase</li>
+    </ul>
+
+
+
+    <h6 id="section_1_3">1.3. Traditional Software Development Approach: Agile Model</h6>
+    <p>Agile model focuses on process adaptability and customer satisfaction by rapid delivery of the working software product.</p>
+    <img src="https://techntuts.com/html/devops/1_DevOps_files/image005.jpg" alt="delivery of the working software product" style="width:100%" >
+    <p><strong>Agile Scrum:</strong></p>
+    <img src="https://techntuts.com/html/devops/1_DevOps_files/image006.jpg" alt="Agile Scrum" style="width:100%" >
+    <p><strong>Advantages:</strong></p>
+    <ul>
+        <li>Dynamic response to requirements</li>
+        <li>Cost effective</li>
+        <li>Superior quality product</li>
+        <li>Direct communication between stakeholders</li>
+        <li>Best suits for large and long-term project</li>
+        <li>Minimum resource requirement</li>
+    </ul>
+    <p><strong>Disadvantages:</strong></p>
+    <ul>
+        <li>Poor documentation</li>
+        <li>Difficult to estimate time and effort for complex project</li>
+        <li>Risky due to the ever-evolving characteristics</li>
+        <li>Difficult to predict to expected result when requirements are unclear</li>
+    </ul>
+
+    <h6 id="section_1_4">1.4. Relationship Between Agile and DevOps</h6>
+    <p>Some relationship between agile and DevOps are below,</p>
+    <ul>
+        <li>Satisfy customer through early and continuous delivery of valuable software</li>
+        <li>Stokehold and developers must work together throughout the project</li>
+        <li>Deliver working software frequency with a preference for shorter timescale.</li>
+    </ul>
+    
+    <p>Benefits of using Agile with DevOps are,</p>
+    <ul>
+        <li>Replace non-human steps using automation tools</li>
+        <li>Improve collaboration between the teams</li>
+        <li>Automate to create a potentially shippable increment</li>
+    </ul>
+
+
+    <h6 id="section_1_5">1.5. Principles of DevOps</h6>
+    <p>The DevOps Agile Skill Association (DASA) defines certain principles for DevOps. It’s has following principle,</p>
+    <ul>
+        <li>Customer centric action: Companies must constantly innovate and invest in good and services that would delight customers to the greatest extent possible</li>
+        <li>Create with the end in mind: The principle focuses on identifying customers true needs and working towards creating products and services that address those demands.</li>
+        <li>End-to-end responsibility: The term End-to-end refers that the team is responsible for the quality and quantity of services it provides to its clients.</li>
+        <li>Cross functional autonomous teams: The teams must be completely self-contained throughout the product lifecycle.</li>
+        <li>Continuous Improvement: It enhances the products and services offered to customers.</li>
+        <li>Automate everything you can: Automation is associated with the goal of redefining how the team delivers its services.</li>
+    </ul>
+    <img src="https://techntuts.com/html/devops/1_DevOps_files/image007.jpg" alt="Principles of DevOps" style="width:100%" >
+
+
+    <h6 id="section_1_6">1.6. DevOps Lifecycle</h6>
+    <p>The DevOps is based on five phases as follows,</p>
+    <img src="https://techntuts.com/html/devops/1_DevOps_files/image008.jpg" alt="DevOps Lifecycle" style="width:100%" >
+    
+    <ul>
+        <li><strong> Continuous Development:</strong> It’s manifests planning and coding. The scope of the project is determined during the planning and developers build the code. There are no DevOps tools are not required for planning.</li>
+        <li><strong> Continuous Testing:</strong> It is the phase in which the application in rigorously tested for bugs.
+            <ul>
+                <li>Automation test tools such as TestNG, Junit, Selenium.</li>
+                <li>TestNG-generate reports and Selenium-implements the automation testing.</li>
+                <li>Docker containers simulate the test environment in the continuous testing.</li>
+                <li>Jenkins assist in conducting automation of the test procedure.</li>
+            </ul>
+        </li>     
+        <li><strong> Continuous Integration:</strong> It is an essential phase of DevOps, which deals with software development. Frequent changes are made to the source code. It is associate by following,
+            <ul>
+                <li>Unit Testing</li>
+                <li>Integration Testing</li>
+                <li>Code Review</li>
+                <li>Code Packaging</li>
+            </ul>
+        </li>
+
+        <li><strong> Continuous Deployment:</strong> The existing code is continuously and seamlessly put together with the new code, which leads to continues development of software. New code is continuously deployed and configuration tools are required to manage it effetely. Some of the tools are below,
+            <ul>
+                <li>Chef</li>
+                <li>Puppet</li>
+                <li>Ansible</li>
+                <li>SaltStack</li>
+                <li><strong>Docker:</strong>Containerization play a pivotal role in the deployment process.</li>
+            </ul>
+        </li> 
+
+        <li><strong> Continuous Monitoring:</strong> It’s including all operational aspects, where critical information about the software use in recorded and analyzed to derive analytics. Some of the popular tools are available for continuous monitoring are,
+            <ul>
+                <li>Nagios</li>
+                <li>Sensu</li>
+                <li>DataDog</li>
+                <li>CloudWatch</li>
+                <li>Grafana</li>
+            </ul>
+        </li>
+    </ul>
+
+
+
+    <h6 id="section_1_7"> 1.7. Categories of DevOps Tools</h6>
+    <p>Each phase of DevOps life cycle has its own set of tools that help in performing specific function. For DevOps tools we can categories as follows,</p>
+    <ul>
+        <li><strong>Source Code Management (SCM):</strong>SCM tracks a running history of changes to a code base, and helps resolve conflicts when merging updates from multiple contributors. Most popular SCM tools are Git and GitHub. Other SCM options are Mercurial, Subversion, GitLab, SVN and CVS.</li>
+        <li><strong>Software Build:</strong>Some of the popular build automation tools preferred by most major organizations are, Gradle, Maven. Other options are HashiCorp Packer, Apache Ant and Gulp.</li>
+        <li><strong>Testing:</strong>Testing validates that the products are production-grade and can be delivered to consumers. Popular testing tools are Selenium, Junit, Appium.</li>
+        <li><strong>Integration:</strong>The popular tools used for integration are Jenkins, Bamboo.</li>
+        <li><strong>CMT and Deployment:</strong>Continuous deployment is one of the crucial stages of the DevOps. Popular deployment tools are Terraform, AWS CodeDeploy, Codeship, Ansible, Chef, Puppet.</li>
+        <li><strong>Monitoring: </strong>onitoring applications help in ensuring the product’s correct functioning, detecting anomalies and negating their effects before they bother the consumers. Popular monitoring tools are Nagios, splunk.</li>
+        <li><strong>Containerization:</strong>Containerization is a form of operating system virtualization in which application run in an isolated user space called containers. Popular Containerization tools are Docker, Docker Swam and Kubernetes.</li>
+    </ul>
+
+    <h6 id="section_1_8"> 1.8. Benefits of DevOps</h6>
+    <p>The benefits of adopting the DevOps methodology by an organization,</p>
+    <ul>
+        <li><strong>Assured Rapid Deployment:</strong> Updates and improvements that happen faster and more frequently will not only please your customers but will also benefit your company.</li>
+        <li><strong>Balanced Working Environment:</strong> DevOps improves the working environment and brings stability in the workspace and strengthens productivity.</li>
+        <li><strong>Drastic Improvement over Quality:</strong> Product quality enhances due to the impact of coordination between development and operations teams, as well as timely gathering of user input.</li>
+        <li><strong>Repetitive Task is automated:</strong> DevOps has a range of benefits because it facilitates quick problem discovery, correction and automation.</li>
+        <li><strong>Proactive Growth of the Business:</strong> DevOps has made it feasible to attain scalability by improving the overall productivity of the business to stay ahead of the competition on a global scale.</li>
+        <li><strong>Continuous Delivery:</strong> All teams are responsible for ensuring stability and adding new features to deliver the software uninterrupted.</li>
+        <li><strong>Minimal Cost of Production:</strong> DevOps helps the team minimize cost for administration and production by keeping both maintenance and new updates together.</li>
+        <li><strong>Higher Productivity:</strong> It allows communication among team members, allowing them to concentrate more on their areas of expertise, removing barriers and encouraging collaboration.</li>
+    </ul>
+
+
+    <h6 id="section_1_9"> 1.9. DevSecOps</h6>
+    <p>DevOps encourages collaborations throughout the app development and deployment process. Software development with DevOps will pose a significant delay is delivery due to security problems. DevSecOps emerged from DevOps to integrate the management of security throughout the development process.</p>
+    <img src="https://techntuts.com/html/devops/1_DevOps_files/image009.jpg" alt="DevSecOps" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/1_DevOps_files/image010.jpg" alt="DevSecOps" style="width:100%" >
+    <p>DevSecOps is an integration of security practices in the DevOps methodology. Its collaboration between developers and security teams resulted in the development of a Security as Code culture. Benefits of DevSecOps are,</p>
+    <ul>
+        <li><strong>Rapid, cost-effective software delivery:</strong> Both time and cost can be reduced by minimizing the repetitive process of addressing security issue after delivery.</li>
+        <li><strong>Repeatable and adaptive process:</strong> Repeatable and adaptive process are applied constantly across the environment, changing adaptive requirements to dynamic ones. </li>
+        <li><strong>Improved, proactive security:</strong> The cybersecurity process in involved in the development cycle.</li>
+        <li><strong>Accelerated security vulnerability patching:</strong> This restricts the threats during the development cycle.</li>
+        <li><strong>Automation compatible with modern development:</strong> Automation can be adopted in cybersecurity testing.</li>
+    </ul>
+    <img src="https://techntuts.com/html/devops/1_DevOps_files/image011.jpg" alt="DevSecOps" style="width:100%" >
+
+
+    <h6 id="section_1_10"> 1.10. DevOps on Cloud</h6>
+    <p>The benefits to using DevOps with cloud projects are also becoming better defined. They include application development speed-to-delivery to meet the needs of the business units faster, user demands that quickly fold back into the software, and lower costs for development, testing, deployment, and operations.</p>
+    <img src="https://techntuts.com/html/devops/1_DevOps_files/image012.jpg" alt="DevOps on Cloud" style="width:100%" >
+    <p>The cloud service is categorized into 3 categories,</p>
+    <ul>
+        <li><strong>Infrastructure as a Service (laaS):</strong> laaS is an instant computing infrastructure service that provides virtualized computing resource over the internet.</li>
+        <li><strong>Platform as a Service (PaaS):</strong> PaaS is method where user is allowed to build, test, debug, deploy, host and update their application in the same environment.</li>
+        <li><strong>Software as a Service (SaaS):</strong> SaaS is a method of delivering application as a service, so that users are free from complex software and hardware management.</li>
+    </ul>
+    <p>DevOps and cloud infrastructure helps in the software development life cycle. It can be divided into 3 phases, such as</p>
+    <img src="https://techntuts.com/html/devops/1_DevOps_files/image013.jpg" alt="DevOps on Cloud" style="width:100%" >
+    <ul>
+        <li><strong>Build:</strong> The cloud provides seamless access to build advanced application.</li>
+        <li><strong>Test:</strong> The cloud is cost-effective and the scope of production can be developed quickly for conducting the tests.</li>
+        <li><strong>Run:</strong> The cloud provides high speed in developing operational environment that are scalable, flexible and efficient of resource. </li>
+    </ul>
+
+
+    <h6 id="section_1_11"> 1.11. Quick Recap</h6>
+    <p>DevOps is a set of practices and tools designed to shorten the lifecycle of a software development process between development and operations team.</p>
+
+    <p>DevOps approach consists of five phases,</p>
+    <ol>
+        <li>Continuous Development</li>
+        <li>Continuous Testing</li>
+        <li>Continuous Integration</li>
+        <li>Continuous Deployment</li>
+        <li>Continuous Monitoring</li>
+    </ol>    
+    <p>The important tools used in each phase,</p>
+    <img src="https://techntuts.com/html/devops/1_DevOps_files/image014.jpg" alt="DevOps" style="width:100%" >
+</body>
+</html>
