@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0 DevOps Tutorial</title>
+</head>
+<body>
+    <div style="background-color: #f0f0f0; padding: 5px 10px; border: 1px solid green; border-radius: 10px;">
+        <h6>DevOps Tutorial Outline:-</h6>
+        <ol>
+            <li><strong><a title="DevOps-1: Introduction to DevOps" href="../../../story/DevOps-Introduction-to-DevOps" target="_blank">DevOps-1: Introduction to DevOps</a></strong></li>
+            <li><strong><a title="DevOps-2:&nbsp;Learn about Linux" href="../../../story/DevOps-Learn-about-Linux" target="_blank">DevOps-2:&nbsp;Learn about Linux</a></strong></li>
+            <li><strong><a title="DevOps-3:&nbsp;Version Control System [Git]" href="../../../story/DevOps-Version-Control-System-Git" target="_blank">DevOps-3:&nbsp;Version Control System [Git]</a></strong></li>
+            <li style="background-color: yellow;"><strong><a title="DevOps-4:&nbsp;Source Code Management (SCM) [Github]" href="../../../story/DevOps-Source-Code-Management-SCM-Github" target="_blank">DevOps-4:&nbsp;Source Code Management (SCM) [Github]</a></strong></li>
+            <li><strong><a title="DevOps-5:&nbsp;CI/CD [Jenkins]" href="../../../story/DevOps--CI-CD-Jenkins" target="_blank">DevOps-5:&nbsp;CI/CD [Jenkins]</a></strong></li>
+            <li><strong><a title="DevOps-6:&nbsp;Software and Automation Testing Framework [Selenium]" href="../../../story/DevOps-Software-and-Automation-Testing-Framework-Selenium" target="_blank">DevOps-6:&nbsp;Software and Automation Testing Framework [Selenium]</a></strong></li>
+            <li><strong><a title="DevOps-7:&nbsp;Configuration Management [Ansible]" href="../../../story/DevOps-Configuration-Management-Ansible" target="_blank">DevOps-7:&nbsp;Configuration Management [Ansible]</a></strong></li>
+            <li><strong><a title="DevOps-8:&nbsp;Containerization [Docker]" href="../../../story/DevOps-Containerization-Docker" target="_blank">DevOps-8:&nbsp;Containerization [Docker]</a></strong></li>
+            <li><strong><a title="DevOps-9:&nbsp;Continuous Monitoring [Nagios]" href="../../../story/DevOps-Continuous-Monitoring-Nagios" target="_blank">DevOps-9:&nbsp;Continuous Monitoring [Nagios]</a></strong></li>
+            <li><strong><a title="DevOps-10:&nbsp;Continuous Orchestration [Kubernetes]" href="../../../story/DevOps-Continuous-Orchestration-Kubernetes" target="_blank">DevOps-10:&nbsp;Continuous Orchestration [Kubernetes]</a></strong></li>
+        </ol>
+    </div>
+
+    <hr style="border: 1px solid inset;">
+
+    <h6 style="margin-top: 20px;">DevOps-4:&nbsp;Source Code Management (SCM) [Github] - Outline</h6>
+    <ul style="list-style: none;">
+        <li><span>4.1:  </span> <strong><a href="#section_4_1">Introduction to Github</a></strong></li>
+        <li><span>4.2:  </span> <strong><a href="#section_4_2">Different between Git and Github</a></strong></li>
+        <li><span>4.3:  </span> <strong><a href="#section_4_3">Github Basic</a></strong></li>
+        <li>
+            <span>4.4:  </span> <strong><a href="#section_4_4">Creating a Repository in Github</a></strong>
+            <ul style="list-style: none;">
+                <li><span>4.4.1.   </span> <strong><a href="#section_4_4_1">Create a Repository in Github using HTTPS protocol</a></strong></li>
+                <li><span>4.4.2.   </span> <strong><a href="#section_4_4_2">Create a Repository in Github using SSH protocol</a></strong></li>
+            </ul>
+        </li>
+        <li><span>4.5:  </span> <strong><a href="#section_4_5">Pulling Commits from Github</a></strong></li>
+        <li><span>4.6:  </span> <strong><a href="#section_4_6">Collaborating between Local and Remote Repository</a></strong></li>
+        <li><span>4.7:  </span> <strong><a href="#section_4_7">Managing Multiple Commits in Git</a></strong></li>
+        <li><span>4.8:  </span> <strong><a href="#section_4_8">Merging File Changes in Git</a></strong></li>
+        <li><span>4.9:  </span> <strong><a href="#section_4_9">Issue Tracking in Github</a></strong></li>
+        <li><span>4.10:  </span> <strong><a href="#section_4_10">Assignment</a></strong></li>        
+    </ul>
+
+    <hr style="border: 1px solid inset;">
+
+    <!-- ====================================================== -->  
+    <h5 id="section_4_1">4.1.   Introduction to Github</h5>
+    <p>GitHub, Inc. is a provider of Internet hosting for software development and version control using Git. It offers the distributed version control and source code management (SCM) functionality of Git, plus its own features. It provides access control and several collaboration features such as bug tracking, feature requests, task management, continuous integration, and wikis for every project.</p>
+    <p>Github is a web-based version control and collaboration platform for software developers. It helps to,</p>
+    <img src="https://techntuts.com/html/devops/github_files/image001.jpg" alt="Introduction to Github" style="width:100%" >
+    <ul>
+        <li>Helps to collaborate</li>
+        <li>Publishes project</li>
+        <li>Supports transparency</li>
+    </ul>
+    <p>Purpose of using Github,</p>
+    <ul>
+        <li>Allows developers to share their code and view other’s code.</li>
+        <li>Helps to follow each other and rate each other’s work</li>
+        <li>Allow user to receive updates about the different project.</li>
+    </ul>
+    <p><br></p>
+    <!-- ====================================================== -->  
+    <h5 id="section_4_2">4.2.   Different between Git and Github</h5>
+    <table>
+        <tr>
+            <th>Git</th>
+            <th>Github</th>
+        </tr>
+        <tr>
+            <td>Git is Version Control System that Mange and track source code.</td>
+            <td>Github is a cloud-based hosting service that manage git repositories.</td>
+        </tr>
+        <tr>
+            <td>It is a software that installed and maintained on the local system.</td>
+            <td>It is a service that hosted on the web</td>
+        </tr>
+        <tr>
+            <td>It is a command-line tool.</td>
+            <td>It is a graphical interface</td>
+        </tr>
+        <tr>
+            <td>It is a tool to mange different versions of a file in a git repository</td>
+            <td>It provides a web-based git repository to upload files.</td>
+        </tr>
+    </table>
+    <p><br></p>
+    <!-- ====================================================== -->
+    <h5 id="section_4_3">4.3.   Github Basic</h5>
+    <p>Github Official website url is below,</p>
+    <a href="https://github.com/">https://github.com/</a> 
+    <img src="https://techntuts.com/html/devops/github_files/image002.jpg" alt="Github" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/github_files/image003.jpg" alt="Github" style="width:100%" >
+    <p><br></p>
+    <!-- ====================================================== -->
+    <h5 id="section_4_4">4.4.   Creating a Repository in Github</h5>
+    <p>To create Github repository, it has two protocol-</p>
+    <ol>
+        <li>HTTPS</li>
+        <li>SSH</li>
+    </ol>
+    <p><br></p>
+    <!-- ====================================================== -->    
+    <h6 id="section_4_4_1">4.4.1.   Create a Repository in Github using HTTPS protocol</h6>
+    <img src="https://techntuts.com/html/devops/github_files/image004.jpg" alt="Github" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/github_files/image005.jpg" alt="Github" style="width:100%" >
+    <p>Now time to go to github and create a repository.</p>
+    <img src="https://techntuts.com/html/devops/github_files/image006.jpg" alt="Github" style="width:100%" >
+    <p><strong>Create a new repository on the command line:-</strong></p>
+<pre class="code">          
+echo "# sdfsdafds" >> README.md<br>
+git init<br>
+git add README.md<br>
+git commit -m "first commit"<br>
+git branch -M main<br>
+git remote add origin https://github.com/JohnSamuels/HttpsRemoteReps.git<br>
+git push -u origin main
+</pre>
+    <p><strong>push an existing repository from the command line:-</strong></p>
+<pre class="code">
+git remote add origin https://github.com/JohnSamuels/HttpsRemoteReps.git <br>
+git branch -M main<br>
+git push -u origin main
+</pre>
+    <img src="https://techntuts.com/html/devops/github_files/image007.jpg" alt="Github" style="width:100%" >
+    <p><br></p>
+    <img src="https://techntuts.com/html/devops/github_files/image008.jpg" alt="Github" style="width:100%" >
+    <p><br></p>
+    <!-- ====================================================== --> 
+    <h6 id="section_4_4_2">4.4.2.   Create a Repository in Github using SSH protocol</h6>
+    <img src="https://techntuts.com/html/devops/github_files/image009.jpg" alt="Github" style="width:100%" >
+    <p><br></p>
+    <img src="https://techntuts.com/html/devops/github_files/image010.jpg" alt="Github" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/github_files/image011.jpg" alt="Github" style="width:100%" >
+    <p><br></p>
+    <img src="https://techntuts.com/html/devops/github_files/image012.jpg" alt="Github" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/github_files/image013.jpg" alt="Github" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/github_files/image014.jpg" alt="Github" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/github_files/image015.jpg" alt="Github" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/github_files/image016.jpg" alt="Github" style="width:100%" >
+    <p><br></p>    
+    <!-- ====================================================== -->            
+    <h5 id="section_4_5">4.5.   Pulling Commits from Github</h5>
+    <img src="https://techntuts.com/html/devops/github_files/image017.jpg" alt="Github" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/github_files/image018.jpg" alt="Github" style="width:100%" >
+    <p><br></p>
+    <!-- ====================================================== --> 
+    <h5 id="section_4_6">4.6.   Collaborating between Local and Remote Repository</h5>
+    <img src="https://techntuts.com/html/devops/github_files/image019.jpg" alt="Github" style="width:100%" >
+    <p><br></p>
+    <img src="https://techntuts.com/html/devops/github_files/image020.jpg" alt="Github" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/github_files/image021.jpg" alt="Github" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/github_files/image022.jpg" alt="Github" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/github_files/image023.jpg" alt="Github" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/github_files/image024.jpg" alt="Github" style="width:100%" >
+    <p><br></p>
+    <img src="https://techntuts.com/html/devops/github_files/image025.jpg" alt="Github" style="width:100%" >
+    <p><br></p>
+    <!-- ====================================================== -->     
+    <h5 id="section_4_7">4.7.   Managing Multiple Commits in Git</h5>
+    <p>To following settings needs to be configured for all commits:</p>
+    <img src="https://techntuts.com/html/devops/github_files/image026.jpg" alt="Github" style="width:100%" >
+    <p><br></p>
+    <img src="https://techntuts.com/html/devops/github_files/image027.jpg" alt="Github" style="width:100%" >
+    <p><br></p>
+    <img src="https://techntuts.com/html/devops/github_files/image028.jpg" alt="Github" style="width:100%" >
+    <p><br></p>
+    <img src="https://techntuts.com/html/devops/github_files/image029.jpg" alt="Github" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/github_files/image030.jpg" alt="Github" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/github_files/image031.jpg" alt="Github" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/github_files/image032.jpg" alt="Github" style="width:100%" >
+    <p><br></p>
+    <!-- ====================================================== -->     
+    <h5 id="section_4_8">4.8.   Merging File Changes in Git</h5>
+    <img src="https://techntuts.com/html/devops/github_files/image033.jpg" alt="Github" style="width:100%" >
+    <p><br></p>
+    <img src="https://techntuts.com/html/devops/github_files/image034.jpg" alt="Github" style="width:100%" >
+    <p><br></p>
+    <img src="https://techntuts.com/html/devops/github_files/image035.jpg" alt="Github" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/github_files/image036.jpg" alt="Github" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/github_files/image037.jpg" alt="Github" style="width:100%" >
+    <p>Open the conflict file and resolve it manually.</p>
+    <img src="https://techntuts.com/html/devops/github_files/image038.jpg" alt="Github" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/github_files/image039.jpg" alt="Github" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/github_files/image040.jpg" alt="Github" style="width:100%" >
+    <p><br></p>
+    <img src="https://techntuts.com/html/devops/github_files/image041.jpg" alt="Github" style="width:100%" >
+    <p><br></p>
+    <!-- ====================================================== --> 
+    <h5 id="section_4_9">4.9.   Issue Tracking in Github</h5>
+    <img src="https://techntuts.com/html/devops/github_files/image042.jpg" alt="Github" style="width:100%" >
+    <p><br></p>
+    <img src="https://techntuts.com/html/devops/github_files/image043.jpg" alt="Github" style="width:100%" >
+    <p><br></p>
+    <img src="https://techntuts.com/html/devops/github_files/image044.jpg" alt="Github" style="width:100%" >
+    <p><br></p>  
+    <img src="https://techntuts.com/html/devops/github_files/image045.jpg" alt="Github" style="width:100%" >
+    <p><br></p>
+    <img src="https://techntuts.com/html/devops/github_files/image046.jpg" alt="Github" style="width:100%" >
+    <p><br></p>
+    <img src="https://techntuts.com/html/devops/github_files/image047.jpg" alt="Github" style="width:100%" >
+    <p><br></p>  
+    <img src="https://techntuts.com/html/devops/github_files/image048.jpg" alt="Github" style="width:100%" >
+    <p><br></p>
+    <img src="https://techntuts.com/html/devops/github_files/image049.jpg" alt="Github" style="width:100%" >
+    <p><br></p>           
+    <!-- ====================================================== --> 
+    <h5 id="section_4_10">4.10.   Assignment</h5>
+    <p>Push the contents of the local repository into the remote repository. Update a file in the remote repository and then pull the changes into the local repository. Subsequently modify the file locally and push the change to the remote repository.</p>
+    <p><br></p>
+    <!-- ====================================================== -->     
+
+</body>
+</html>

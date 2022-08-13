@@ -1,0 +1,686 @@
+<!---https://techntuts.com/html/devops/1_DevOps.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0 DevOps Tutorial</title>
+</head>
+<body>
+    <div style="background-color: #f0f0f0; padding: 5px 10px; border: 1px solid green; border-radius: 10px;">
+        <h6 style="margin-top: 20px;">DevOps Tutorial Outline:-</h6>
+        <ol>
+            <li><strong><a title="DevOps-1: Introduction to DevOps" href="../../../story/DevOps-Introduction-to-DevOps" target="_blank">DevOps-1: Introduction to DevOps</a></strong></li>
+            <li><strong><a title="DevOps-2:&nbsp;Learn about Linux" href="../../../story/DevOps-Learn-about-Linux" target="_blank">DevOps-2:&nbsp;Learn about Linux</a></strong></li>
+            <li style="background-color: yellow;"><strong><a title="DevOps-3:&nbsp;Version Control System [Git]" href="../../../story/DevOps-Version-Control-System-Git" target="_blank">DevOps-3:&nbsp;Version Control System [Git]</a></strong></li>
+            <li><strong><a title="DevOps-4:&nbsp;Source Code Management (SCM) [Github]" href="../../../story/DevOps-Source-Code-Management-SCM-Github" target="_blank">DevOps-4:&nbsp;Source Code Management (SCM) [Github]</a></strong></li>
+            <li><strong><a title="DevOps-5:&nbsp;CI/CD [Jenkins]" href="../../../story/DevOps--CI-CD-Jenkins" target="_blank">DevOps-5:&nbsp;CI/CD [Jenkins]</a></strong></li>
+            <li><strong><a title="DevOps-6:&nbsp;Software and Automation Testing Framework [Selenium]" href="../../../story/DevOps-Software-and-Automation-Testing-Framework-Selenium" target="_blank">DevOps-6:&nbsp;Software and Automation Testing Framework [Selenium]</a></strong></li>
+            <li><strong><a title="DevOps-7:&nbsp;Configuration Management [Ansible]" href="../../../story/DevOps-Configuration-Management-Ansible" target="_blank">DevOps-7:&nbsp;Configuration Management [Ansible]</a></strong></li>
+            <li><strong><a title="DevOps-8:&nbsp;Containerization [Docker]" href="../../../story/DevOps-Containerization-Docker" target="_blank">DevOps-8:&nbsp;Containerization [Docker]</a></strong></li>
+            <li><strong><a title="DevOps-9:&nbsp;Continuous Monitoring [Nagios]" href="../../../story/DevOps-Continuous-Monitoring-Nagios" target="_blank">DevOps-9:&nbsp;Continuous Monitoring [Nagios]</a></strong></li>
+            <li><strong><a title="DevOps-10:&nbsp;Continuous Orchestration [Kubernetes]" href="../../../story/DevOps-Continuous-Orchestration-Kubernetes" target="_blank">DevOps-10:&nbsp;Continuous Orchestration [Kubernetes]</a></strong></li>
+        </ol>
+    </div>
+
+    <hr style="border: 1px solid inset;">
+
+    <h6 style="margin-top: 20px;">DevOps-3:&nbsp;Version Control System [Git] - Outline</h6>
+    <ul style="list-style: none;">
+        <li>
+            <span>Part-1:  </span> <strong><a href="#section_3_1">Version Control System</a></strong>
+            <ul style="list-style: none;">
+                <li><span>3.1.1.   </span> <strong><a href="#section_3_1_1">Overview</a></strong></li>
+                <li><span>3.1.2.   </span> <strong><a href="#section_3_1_2">Types of Version Control System</a></strong></li>
+                <li><span>3.1.3.   </span> <strong><a href="#section_3_1_3">Tools for Version Control System</a></strong></li>
+            </ul>
+        </li>
+
+        <li>
+            <span>Part-2:  </span> <strong><a href="#section_3_2">Git</a></strong>
+            <ul style="list-style: none;">
+                <li><span>3.2.1.   </span> <strong><a href="#section_3_2_1">Introduction to Git</a></strong></li>
+                <li><span>3.2.2.   </span> <strong><a href="#section_3_2_2">Git Repository</a></strong></li>
+                <li><span>3.2.3.   </span> <strong><a href="#section_3_2_3">Life Cycle of Git and Git Workflow</a></strong></li>
+                <li><span>3.2.4.   </span> <strong><a href="#section_3_2_4">Download</a></strong></li>
+                <li><span>3.2.5.   </span> <strong><a href="#section_3_2_5">Installation</a></strong></li>
+                <li><span>3.2.6.   </span> <strong><a href="#section_3_2_6">Git Configuration Levels</a></strong></li>
+                <li><span>3.2.7.   </span> <strong><a href="#section_3_2_7">Configuration</a></strong></li>
+                <li><span>3.2.8.   </span> <strong><a href="#section_3_2_8">Git Commands</a></strong></li>
+                <li><span>3.2.9.   </span> <strong><a href="#section_3_2_9">Create a Git Repository</a></strong></li>
+                <li><span>3.2.10.  </span> <strong><a href="#section_3_2_10">Git Workflow</a></strong></li>
+                <li><span>3.2.11.  </span> <strong><a href="#section_3_2_11">Track Changes between Stages</a></strong></li>
+                <li><span>3.2.12.  </span> <strong><a href="#section_3_2_12">Steps to Revert to Earlier Commits in Git</a></strong></li>
+                <li><span>3.2.13.  </span> <strong><a href="#section_3_2_13">Delete Files from Git</a></strong></li>
+                <li><span>3.2.14.  </span> <strong><a href="#section_3_2_14">Ignoring Files in Git</a></strong></li>
+                <li><span>3.2.15.  </span> <strong><a href="#section_3_2_15">Rename files in Git</a></strong></li>
+                <li><span>3.2.16.  </span> <strong><a href="#section_3_2_16">Assignment</a></strong></li>
+            </ul>
+        </li>
+
+        <li>
+            <span>Part-3:  </span> <strong><a href="#section_3_3">Operations in Git</a></strong>
+            <ul style="list-style: none;">
+                <li><span>3.3.1.   </span> <strong><a href="#section_3_3_1">Branching in Git</a></strong></li>
+                <li>
+                    <span>3.3.2.   </span> <strong><a href="#section_3_3_2">Merging in Git</a></strong>
+                    <ul style="list-style: none;">
+                        <li><span>3.3.2.1. </span> <strong><a href="#section_3_3_2_1">Fast Forward Merge in Git</a></strong></li>
+                        <li><span>3.3.2.2. </span> <strong><a href="#section_3_3_2_2">Recursive Merge</a></strong></li>
+                        <li><span>3.3.2.3. </span> <strong><a href="#section_3_3_2_3">Resolving Marge Conflict in Git</a></strong></li>
+                        <li><span>3.3.2.4. </span> <strong><a href="#section_3_3_2_4">Resolving Merge Conflicts on File Modifications</a></strong></li>
+                    </ul>
+                </li>
+                <li><span>3.3.3.   </span> <strong><a href="#section_3_3_3">Stashing in Git</a></strong></li>
+                <li><span>3.3.4.   </span> <strong><a href="#section_3_3_4">Rebasing in Git</a></strong></li>
+                <li><span>3.3.5.   </span> <strong><a href="#section_3_3_5">Cloning in Git</a></strong></li>
+                <li><span>3.3.6.   </span> <strong><a href="#section_3_3_6">Assignments</a></strong></li>
+                <li><span>3.3.7.   </span> <strong><a href="#section_3_3_7">Demo - Deploy file to Github via Git</a></strong></li>
+                <li><span>3.3.8.   </span> <strong><a href="#section_3_3_8">Project </a></strong></li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr style="border: 1px solid inset;">
+
+        <h5 id="section_3_1">Part-1:  Version Control System</h5>
+        <h6 id="section_3_1_1">3.1.1.   Overview</h6>
+        <p>Version Control System helps to work on a big software development project that consist of:</p>
+        <ul>
+            <li>Technical Concepts</li>
+            <li>Collaboration between different team members</li>
+            <li>Frequent Changes</li>
+        </ul>
+
+        <p>A Version Control System allows users to keep track of the changes in software development project and enables them to collaborate on those projects.</p>
+
+        <p>Purposes of using Version Control System:</p>
+        <ul>
+            <li>Records changes to a set of files</li>
+            <li>Tracks every individual change by each contributor</li>
+            <li>Facilitates a smooth and continuous flow of changes to the code</li>
+            <li>Supports a developer’s preference and is flexible to use.</li>
+        </ul>
+
+        <p>Different ways in which a version control system streamlines your project:</p>
+        <ul>
+            <li>Allows easy issue tracking</li>
+            <li>Provides a complete long-term change history of every file with large file storage</li>
+            <li>Facilities easy branching and merging</li>
+            <li>Helps in tracing each change made to the software</li>
+            <li>Tracks the status of each step in the pipeline</li>
+            <li>Allows developers to tell each other about different changes pushed to a GitHub repository</li>
+            <li>Gives real-time insights into the codebase</li>
+            <li>Offers unlimited free private and public repositories</li>
+        </ul>
+        <p>Some benefits of version control system are:</p>
+        <img src="https://techntuts.com/html/devops/git_files/image001.jpg" alt="benefits of version control system" style="width:100%" >
+        <!-- ====================================================== -->
+        <h6 id="section_3_1_2">3.1.2.   Types of Version Control System</h6>
+        <p>Types of Version Control System are,</p>
+        <ol>
+            <li><strong>Local Version Control System:</strong> It’s maintaining track of files within the local system.
+            <img src="https://techntuts.com/html/devops/git_files/image002.jpg" alt="benefits of version control system" style="width:100%" >
+            </li>
+            <li><strong>Centralized Version Control System:</strong> It’s using a central server to store all the files, and all the changes in the files are also tracked under the centralize server.
+            <img src="https://techntuts.com/html/devops/git_files/image003.jpg" alt="benefits of version control system" style="width:100%" >
+            </li>
+            <li><strong>Distributed Version Control System:</strong> It’s moves from the client-server approach of the centralized version control system to a peer-to-peer approach.
+            <img src="https://techntuts.com/html/devops/git_files/image004.jpg" alt="benefits of version control system" style="width:100%" >
+            </li>
+        </ol>
+        <!-- ====================================================== -->
+        <h6 id="section_3_1_3">3.1.3.   Tools for Version Control System</h6>
+        <p>Some of the preferred tools for Version Control System are:</p>
+        <img src="https://techntuts.com/html/devops/git_files/image005.jpg" alt="benefits of version control system" style="width:100%" >
+        <!-- ====================================================== -->
+        <h5 id="section_3_2">Part-2:  Git</h5>
+        <!-- ====================================================== -->        
+        <h6 id="section_3_2_1">3.2.1.   Introduction to Git</h6>
+        <p>Git is a type of Version Control System (VCS) that makes it easier to track changes to files. Git allows multiple developers to work together and supports non-liner development. Git is a version control system. It has a distributed architecture. It provides a flexible environment to work collaboratively and securely. You can create and manage remote repository using Git. Git facilitates the branching and merging of files within the main repository. Git allows every user to have a copy of the project files locally, thus making the files in the server secure.</p>
+        <img src="https://techntuts.com/html/devops/git_files/image006.jpg" alt="Introduction to Git" style="width:100%" >
+        <p>Git is a software that runs locally. So, files and their history are stored on your computer. You can use GitHub to store a copy of the files and their revision history. Git enables you to collaborate more easily with other developers.</p>
+        <img src="https://techntuts.com/html/devops/git_files/image007.jpg" alt="Introduction to Git" style="width:100%" >
+        <p>Git can merge the branches so that different people can work on different parts of the same file and later merge them.</p>
+        <p>Purpose of using Git,</p>
+        <ul>
+            <li>Tracks changes in the source code</li>
+            <li>Uses distributed version control tool for source code management</li>
+            <li>Allows multiple developers to work together</li>
+            <li>Support non-liner development because of its several parallel branches</li>
+        </ul>
+        <p>Benefits of using Git,</p>
+        <ul>
+            <li>Has flexible environment</li>
+            <li>Keeps the files in secure server</li>
+            <li>Create and manage remote repositories</li>
+            <li>Facilitates branching and merging</li>
+        </ul>
+        <!-- ====================================================== --> 
+        <h6 id="section_3_2_2">3.2.2.   Git Repository</h6>
+        <p>A git repository contains all the project files and the entire revision history.</p>
+        <p>Characteristics of Git Repository,</p>
+        <img src="https://techntuts.com/html/devops/git_files/image008.jpg" alt="Git Repository" style="width:100%" >
+        <!-- ====================================================== --> 
+        <h6 id="section_3_2_3">3.2.3.   Life Cycle of Git and Git Workflow</h6>
+        <img src="https://techntuts.com/html/devops/git_files/image009.jpg" alt="Life Cycle of Git and Git Workflow" style="width:100%">
+        <p>The three different file states of Git are:</p>
+        <ul>
+            <li>Committed</li>
+            <li>Modified</li>
+            <li>Staged</li>
+        </ul>
+        <p>Each state relates to a specific Git section,</p>
+        <ul>
+            <li>Working Directory [Untracked file, Modified files, Staged files, committed files]: It is the local physical directory, where you make changes to your files.</li>
+            <li>Staging Area: It is place where Git keeps a reference of all modifications to be sent in the next commit.</li>
+            <li>Git directory(repository) [Modified files, Staged files, committed files]: It is the repository which stores all files in a compressed form.</li>
+        </ul>
+        <p>The following diagram states the workflow of Git:</p>
+        <img src="https://techntuts.com/html/devops/git_files/image010.jpg" alt="Life Cycle of Git and Git Workflow" style="width:100%">
+        <!-- ====================================================== --> 
+        <h6 id="section_3_2_4">3.2.4.   Download</h6>
+        <p>Git is available to download for Windows, Linux and Mac</p>
+        <a href="https://git-scm.com/">https://git-scm.com/</a> 
+        <!-- ====================================================== --> 
+        <h6 id="section_3_2_5">3.2.5.   Installation</h6>
+        <p>Download Git from above link and install it by installer file. After install you can check the git version,</p>
+        <pre class="code">
+git –version
+        </pre>
+        <p><strong>Method-1: Installing Git on Mac:</strong></p>
+        <ol>
+            <li>Download Git from http://git-scm.com/download</li>
+            <li>Execute the installer: Select default settings</li>
+            <li>Execute “git --version” to verify your installation</li>
+        </ol>
+        <p><strong>Method-2: Installing Git on Mac:</strong></p>
+        <p>Use the package manager Homebrew(brew.sh)</p>
+        <ol>
+            <li>Brew install git</li>
+            <li>git –version</li>
+        </ol>
+        <p><strong>Installing Git on Linux:</strong></p>
+        <p>On Debian based distribution like ubuntu:</p>
+        <ol>
+            <li>apt-get install git</li>
+            <li>git –version</li>
+        </ol>
+        <p>On Fedora:</p>
+        <ol>
+            <li>yun install git (up to Fedora 21)</li>
+            <li>dnf install git (Fedora 22 or later)</li>
+            <li>git --version</li>
+        </ol>
+        <!-- ====================================================== --> 
+        <h6 id="section_3_2_6">3.2.6.   Git Configuration Levels</h6>
+        <ol>
+            <li>
+                <b>System Levels (--system):</b> It is the top most level.<br/>
+                <b>Command:</b> “git config -system”<br/>
+                <b>Save to:</b> etc/gitconfig<br/>
+            </li>
+            <li>
+                <b>Global Level (--global):</b> it is the next level after system level<br/>
+                <b>Command:</b> “git config -global”<br/>
+                <b>Save to:</b> ~/.gitconfig(on Windows OS it would be User/…)<br/>
+            </li>
+            <li>
+                <b>Local Level (--local):</b> It is the last level and it is the user repository level.<br/>
+                <b>Command:</b> “git config -local”(Or Just ‘git config’)<br/>
+                <b>Save to:</b> .git/config<br/>
+            </li>
+        </ol>
+
+        <p> <b>NOTE:</b> Local overrides Global and Global override System Level.</p>
+        <p>User settings in Git are mainly defined at Global level because they correspond to user level settings for all repositories.</p>
+        <!-- ====================================================== --> 
+        <h6 id="section_3_2_7">3.2.7.   Configuration</h6>
+        <p>To following settings needs to be configured for all commits:</p>
+        <ol>
+            <li>User.name [git config –global user.name “Your Name”]</li>
+            <li>User.email [git config –global user.email “you@example.com”]</li>
+        </ol>
+<p> <b>NOTE:</b>  Yellow mark is level name. user.name and user.email are mainly configured to associate commit actions to a particular person.</p>
+<p>Configure Git at a global level and choose a color of the UI to define the configuration of the editor.</p>
+        <pre class="code">
+git config –global color.ui “auto”
+        </pre>
+        <pre class="code">
+git config –global core.editor “’ C:\Program Files\Sublime Text\sublime_text.exe’”
+        </pre>
+
+        <p>For information related to the number of configurations:</p>
+        <pre class="code">
+git config –list
+        </pre>
+        <p>Output:</p>
+        <pre class="code">
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager-core
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.email=mamunbd.ruet@gmail.com
+user.name=bdstar
+        </pre>
+        <p>To check the configuration level,</p>
+        <pre class="code">
+git config –global user.name            
+        </pre>
+        <p>You can change level to system for the above command</p>
+        <pre class="code">
+git config –system user.name            
+        </pre>
+        <!-- ====================================================== --> 
+        <h6 id="section_3_2_8">3.2.8.   Git Commands</h6>
+        <p>Global Settings in Git: It is important because Git commit uses this information.</p>
+        <pre class="code">
+git config –global user.name “Your Name”
+git config –global user.email email@mail.com
+        </pre>
+        <p>Create a new repository:</p>
+        <pre class="code">
+git init
+        </pre>
+        <p>Clone an existing repository:</p>
+        <pre class="code">
+git clone [url]
+        </pre>
+        <p>Check the status:</p>
+        <pre class="code">
+git status     
+        </pre>
+        <p>Add changes to the staging area:</p>
+        <pre class="code">
+git add file-name
+        </pre>
+        <p>Add changes to the staging area</p>
+        <pre class="code">
+git add -A
+        </pre>
+        <p>Remove files</p>
+        <pre class="code">
+git rm [file-name]
+        </pre>
+        <p>Commit changes to the local repository</p>
+        <pre class="code">
+git commit -m “your message”
+        </pre>
+        <p>Pulling changes form a remote repository</p>
+        <pre class="code">
+git pull [branch_name] [remote_url]
+        </pre>
+        <p>Push changes to a remote repository</p>
+        <pre class="code">
+git push origin [branch_name]
+        </pre>
+        <p>Push changes to a remote repository</p>
+        <pre class="code">
+git push –all
+        </pre>
+        <p>Connect to a remote repository</p>
+        <pre class="code">
+git remote add origin [server]
+        </pre>
+        <!-- ====================================================== --> 
+        <h6 id="section_3_2_9">3.2.9.   Create a Git Repository</h6>
+        <ol>
+            <li><p>To create an empty directory</p>
+
+            <strong>CMD: </strong> 
+            <pre class="code">
+mkdir [directory-name]
+            </pre>
+            <strong>Example,</strong>
+            <pre class="code"> 
+mkdir myProjectDirectory
+            </pre>
+            <li><p>Next go to myProjectDirectory folder the command is following,</p>
+            <pre class="code">
+cd myProjectDirectory/
+            </pre>
+            <li><p>Convert the directory into repository</p>
+            <pre class="code">   
+<span style="color: blue">myProjectDirectory></span> git init
+            </pre>
+            <p>Here, git init command creates a hidden directory that stores all the metadata required for it to function. It will be initialized an empty Git repository in your project directory by .git hidden folder.</p>
+            <pre class="code">
+git init [directory-name]
+            </pre>
+            <p>This command create and initialized git repository in the same time.</p>
+
+            <li><p>To get repository status</p>
+            <pre class="code">
+<span style="color: blue">myProjectDirectory></span> git status
+            </pre>
+            <p>Its show the which branch you are and list the file changes in your repository. Git status shows that you are in branch master and there are no files to commit. The branch master is created by default.</p>
+
+            <li><p>To check number of file content inside the git repository,</p>
+            <pre class="code">
+<span style="color: blue">myProjectDirectory></span>ls -ls
+<span style="color: blue">myProjectDirectory></span>ls -lrt  
+            </pre>
+            <li><p>Check the content of the hidden directory using:</p>
+            <pre class="code">
+<span style="color: blue">myProjectDirectory></span>ls -la
+            </pre>
+        </ol>
+        <!-- ====================================================== --> 
+        <h6 id="section_3_2_10">3.2.10.   Git Workflow</h6>
+        <p>Git maintains 3 snapshots of a file in separate directory.</p>
+        <img src="https://techntuts.com/html/devops/git_files/image011.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image012.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image013.jpg" alt="Git Workflow" style="width:100%">
+        <p>While committing, it is important to add a message string using the -m flag. If missed, a default editor opens asking for comments.</p>
+        <img src="https://techntuts.com/html/devops/git_files/image014.jpg" alt="Git Workflow" style="width:100%">
+        <p>To restrict the output to one-line, execute: 1git log –oneliner, this will display the information in a single line.</p>
+        <img src="https://techntuts.com/html/devops/git_files/image015.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image016.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image017.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image018.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image019.jpg" alt="Git Workflow" style="width:100%"> 
+        <p><br></p>       
+        <!-- ====================================================== --> 
+        <h6 id="section_3_2_11">3.2.11.  Track Changes between Stages</h6>
+        <p>Tracking is the ability to identify changes between the different versions of the same file, spread across various repositories.</p>
+        <img src="https://techntuts.com/html/devops/git_files/image020.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image021.jpg" alt="Git Workflow" style="width:100%">
+        <p><br></p> 
+        <img src="https://techntuts.com/html/devops/git_files/image022.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image023.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image024.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image025.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image026.jpg" alt="Git Workflow" style="width:100%"> 
+        <img src="https://techntuts.com/html/devops/git_files/image027.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image028.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image029.jpg" alt="Git Workflow" style="width:100%">         
+        <p><br></p>
+        <!-- ====================================================== --> 
+        <h6 id="section_3_2_12">3.2.12.  Steps to Revert to Earlier Commits in Git</h6>
+        <img src="https://techntuts.com/html/devops/git_files/image030.jpg" alt="Git Workflow" style="width:100%">  
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image031.jpg" alt="Git Workflow" style="width:100%"> 
+        <img src="https://techntuts.com/html/devops/git_files/image032.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image033.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image034.jpg" alt="Git Workflow" style="width:100%"> 
+        <p><br></p> 
+        <!-- ====================================================== --> 
+        <h6 id="section_3_2_13">3.2.13.  Delete Files from Git</h6>
+        <img src="https://techntuts.com/html/devops/git_files/image035.jpg" alt="Git Workflow" style="width:100%"> 
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image036.jpg" alt="Git Workflow" style="width:100%"> 
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image037.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image038.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image039.jpg" alt="Git Workflow" style="width:100%"> 
+        <img src="https://techntuts.com/html/devops/git_files/image040.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image041.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image042.jpg" alt="Git Workflow" style="width:100%">
+        <p><br></p>       
+        <!-- ====================================================== --> 
+        <h6 id="section_3_2_14">3.2.14.  Ignoring Files in Git</h6>
+        <p>How to ignore files in Git,</p>
+        <img src="https://techntuts.com/html/devops/git_files/image043.jpg" alt="Git Workflow" style="width:100%">
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image044.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image045.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image046.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image047.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image048.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image049.jpg" alt="Git Workflow" style="width:100%">
+        <p><br></p>
+        <!-- ====================================================== --> 
+        <h6 id="section_3_2_15">3.2.15.  Rename files in Git</h6>
+        <img src="https://techntuts.com/html/devops/git_files/image050.jpg" alt="Git Workflow" style="width:100%">
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image051.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image052.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image053.jpg" alt="Git Workflow" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image054.jpg" alt="Git Workflow" style="width:100%">
+        <p><br></p>
+        <!-- ====================================================== --> 
+        <h6 id="section_3_2_16">3.2.16.  Assignment</h6>
+        <p><strong>Assignment-1:</strong></p> 
+        <ul>
+            <li>In a newly created repository, demonstrate the ability to change a file from untracked status to tracked.</li>
+            <li>Later unstage the file so that it becomes "untracked" again.</li>
+        </ul>
+
+        <p><strong>Assignment-2:</strong></p> 
+        <ul>
+            <li>Add two files a.txt and b.txt into a repository.</li>
+            <li>Stage and commit these files.</li>
+            <li>Now delete a.txt from the working directory and staged area, whereas delete b.txt from the staged area but retain in the working directory.</li>
+        </ul> 
+
+        <p><strong>Assignment-3:</strong></p> 
+        <ul>
+            <li>After making a couple of commits, modify the global settings for name and email and make a couple of additional commits.</li>
+            <li>View the history of the commits, which will display the old and new configurations.</li>
+            <li>Later reconfigure Git to ignore files with .txt extension and add two files a.txt and b.txt into the repository</li>
+        </ul>
+        <p><br></p>
+        <!-- ====================================================== --> 
+        <h5 id="section_3_3">Part-3:  Operations in Git</h5>
+        <img src="https://techntuts.com/html/devops/git_files/image055.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <!-- ====================================================== -->        
+        <h6 id="section_3_3_1">3.3.1.   Branching in Git</h6>
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image056.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image057.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image058.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image059.jpg" alt="Operations in Git" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image060.jpg" alt="Operations in Git" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image061.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <!-- ====================================================== -->        
+        <h6 id="section_3_3_2">3.3.2.   Merging in Git</h6>
+        <img src="https://techntuts.com/html/devops/git_files/image062.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image063.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image064.jpg" alt="Operations in Git" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image065.jpg" alt="Operations in Git" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image066.jpg" alt="Operations in Git" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image067.jpg" alt="Operations in Git" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image068.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <!-- ====================================================== -->        
+        <h6 id="section_3_3_2_1">3.3.2.1. Fast Forward Merge in Git</h6>
+        <img src="https://techntuts.com/html/devops/git_files/image069.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image070.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>        
+        <img src="https://techntuts.com/html/devops/git_files/image071.jpg" alt="Operations in Git" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image072.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image073.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image074.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <!-- ====================================================== -->        
+        <h6 id="section_3_3_2_2">3.3.2.2. Recursive Merge</h6>
+        <img src="https://techntuts.com/html/devops/git_files/image075.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image076.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image077.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image078.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image079.jpg" alt="Operations in Git" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image080.jpg" alt="Operations in Git" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image081.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <!-- ====================================================== -->        
+        <h6 id="section_3_3_2_3">3.3.2.3. Resolving Marge Conflict in Git</h6>
+        <img src="https://techntuts.com/html/devops/git_files/image082.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image083.jpg" alt="Operations in Git" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image084.jpg" alt="Operations in Git" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image085.jpg" alt="Operations in Git" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image086.jpg" alt="Operations in Git" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image087.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <!-- ====================================================== -->        
+        <h6 id="section_3_3_2_4">3.3.2.4. Resolving Merge Conflicts on File Modifications</h6>
+        <img src="https://techntuts.com/html/devops/git_files/image088.jpg" alt="Operations in Git" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image089.jpg" alt="Operations in Git" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image090.jpg" alt="Operations in Git" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image091.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <!-- ====================================================== -->        
+        <h6 id="section_3_3_3">3.3.3.   Stashing in Git</h6>
+        <img src="https://techntuts.com/html/devops/git_files/image092.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image093.jpg" alt="Operations in Git" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image094.jpg" alt="Operations in Git" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image095.jpg" alt="Operations in Git" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image096.jpg" alt="Operations in Git" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image097.jpg" alt="Operations in Git" style="width:100%">
+        <img src="https://techntuts.com/html/devops/git_files/image098.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <!-- ====================================================== -->        
+        <h6 id="section_3_3_4">3.3.4.   Rebasing in Git</h6>
+        <img src="https://techntuts.com/html/devops/git_files/image099.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image100.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image101.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image102.jpg" alt="Operations in Git" style="width:100%">        
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image103.jpg" alt="Operations in Git" style="width:100%">        
+        <img src="https://techntuts.com/html/devops/git_files/image104.jpg" alt="Operations in Git" style="width:100%">        
+        <img src="https://techntuts.com/html/devops/git_files/image105.jpg" alt="Operations in Git" style="width:100%">        
+        <p><br></p>
+        <!-- ====================================================== -->        
+        <h6 id="section_3_3_5">3.3.5.   Cloning in Git</h6>
+        <img src="https://techntuts.com/html/devops/git_files/image106.jpg" alt="Operations in Git" style="width:100%">        
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image107.jpg" alt="Operations in Git" style="width:100%">        
+        <img src="https://techntuts.com/html/devops/git_files/image108.jpg" alt="Operations in Git" style="width:100%">        
+        <img src="https://techntuts.com/html/devops/git_files/image109.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image110.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <img src="https://techntuts.com/html/devops/git_files/image111.jpg" alt="Operations in Git" style="width:100%">        
+        <img src="https://techntuts.com/html/devops/git_files/image112.jpg" alt="Operations in Git" style="width:100%">
+        <p><br></p>
+        <!-- ====================================================== -->        
+        <h6 id="section_3_3_6">3.3.6.   Assignments</h6>
+        <p><strong>Assignment-1:</strong></p>  
+        <p>Create a branch "featureOne" and view the commit history in this branch. Make a change to a file and merge it back into the master branch. Then, make simultaneous changes to the same file to cause conflict and do the merge again.</p>
+
+        <p><strong>Assignment-2:</strong></p>  
+        <p>Clone a repository from the remote repository into the local repository. Ensure that you can view the entire commit history.</p>
+
+        <p><strong>Assignment-3:</strong></p>  
+        <p>Create a branch and edit a file that you inherited from master branch. Make a commit in that branch. Before you commit a second time, stash it away. Switch to master branch and create a new branch and apply the stash in that newly created branch. Then, return to the first branch and apply the stash again, and then delete that stash entry.</p>
+        <p><br></p>
+        <!-- ====================================================== -->        
+        <h6 id="section_3_3_7">3.3.7.   Demo - Deploy file to Github via Git</h6>
+<pre>
+<font color="#8AE234"><b>mamun@mamun-pc</b></font>:<font color="#729FCF"><b>/var/www/html/microfinnext-frontend</b></font><span style="background-color: yellow;">$ git branch</span>
+* <font color="#4E9A06">my_task</font>
+    supporttest
+<font color="#8AE234"><b>mamun@mamun-pc</b></font>:<font color="#729FCF"><b>/var/www/html/microfinnext-frontend</b></font><span style="background-color: yellow;">$ git status</span>
+On branch my_task
+Changes not staged for commit:
+    (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+    (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+
+    <font color="#CC0000">modified:   src/components/services/configs/loan_purposes/Index.js</font>
+    <font color="#CC0000">modified:   src/shared/common/config.js</font>
+    <font color="#CC0000">modified:   src/store/modules/auth/auth.js</font>
+    <font color="#CC0000">modified:   vue.config.js</font>
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+<font color="#8AE234"><b>mamun@mamun-pc</b></font>:<font color="#729FCF"><b>/var/www/html/microfinnext-frontend</b></font><span style="background-color: yellow;">$ git add src/components/services/configs/loan_purposes/Index.js </span>
+<font color="#8AE234"><b>mamun@mamun-pc</b></font>:<font color="#729FCF"><b>/var/www/html/microfinnext-frontend</b></font><span style="background-color: yellow;">$ git commit -m &quot;Task #14234&quot;</span>
+[my_task 52f3807b] Task #14234
+    1 file changed, 24 insertions(+), 3 deletions(-)
+<font color="#8AE234"><b>mamun@mamun-pc</b></font>:<font color="#729FCF"><b>/var/www/html/microfinnext-frontend</b></font><span style="background-color: yellow;">$ git stash</span>
+Saved working directory and index state WIP on my_task: 52f3807b Task #14234
+<font color="#8AE234"><b>mamun@mamun-pc</b></font>:<font color="#729FCF"><b>/var/www/html/microfinnext-frontend</b></font><span style="background-color: yellow;">$ git status</span>
+On branch my_task
+nothing to commit, working tree clean
+<font color="#8AE234"><b>mamun@mamun-pc</b></font>:<font color="#729FCF"><b>/var/www/html/microfinnext-frontend</b></font><span style="background-color: yellow;">$ git checkout supporttest</span> 
+Switched to branch &apos;supporttest&apos;
+Your branch is ahead of &apos;origin/supporttest&apos; by 271 commits.
+    (use &quot;git push&quot; to publish your local commits)
+<font color="#8AE234"><b>mamun@mamun-pc</b></font>:<font color="#729FCF"><b>/var/www/html/microfinnext-frontend</b></font><span style="background-color: yellow;">$ git pull microfin supporttest</span> 
+remote: Counting objects: 39, done.
+remote: Compressing objects: 100% (39/39), done.
+remote: Total 39 (delta 17), reused 0 (delta 0)
+Unpacking objects: 100% (39/39), done.
+From 192.168.1.15:microfin-dev-next/microfinnext-frontend
+    * branch              supporttest -&gt; FETCH_HEAD
+    915801f0..9a0260ea  supporttest -&gt; microfin/supporttest
+Updating 915801f0..9a0260ea
+Fast-forward
+    src/components/members/member_information/View.vue               |  8 <font color="#4E9A06">++++</font><font color="#CC0000">----</font>
+    src/components/services/configs/loan_products/Save.js            |  1 <font color="#4E9A06">+</font>
+    src/components/services/loans/one_time_loan_transactions/Save.js |  9 <font color="#4E9A06">++++++++</font><font color="#CC0000">-</font>
+    src/components/services/members/member_information/Index.js      | 25 <font color="#4E9A06">++++++++++++++</font><font color="#CC0000">-----------</font>
+    4 files changed, 27 insertions(+), 16 deletions(-)
+<font color="#8AE234"><b>mamun@mamun-pc</b></font>:<font color="#729FCF"><b>/var/www/html/microfinnext-frontend</b></font><span style="background-color: yellow;">$ git checkout my_task </span>
+Switched to branch &apos;my_task&apos;
+<font color="#8AE234"><b>mamun@mamun-pc</b></font>:<font color="#729FCF"><b>/var/www/html/microfinnext-frontend</b></font><span style="background-color: yellow;">$ git rebase supporttest </span>
+First, rewinding head to replay your work on top of it...
+Applying: Task #14234
+<font color="#8AE234"><b>mamun@mamun-pc</b></font>:<font color="#729FCF"><b>/var/www/html/microfinnext-frontend</b></font><span style="background-color: yellow;">$ git push origin my_task</span>
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 1.06 KiB | 544.00 KiB/s, done.
+Total 8 (delta 6), reused 0 (delta 0)
+remote: 
+remote: To create a merge request for my_task, visit:
+remote:   http://192.168.1.15/md.mamun/microfinnext-frontend/merge_requests/new?merge_request%5Bsource_branch%5D=my_task
+remote: 
+To 192.168.1.15:md.mamun/microfinnext-frontend.git
+    023e3a59..5d6ae824  my_task -&gt; my_task
+<font color="#8AE234"><b>mamun@mamun-pc</b></font>:<font color="#729FCF"><b>/var/www/html/microfinnext-frontend</b></font><span style="background-color: yellow;">$ git stash apply </span>
+On branch my_task
+Changes not staged for commit:
+    (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+    (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+
+    <font color="#CC0000">modified:   src/shared/common/config.js</font>
+    <font color="#CC0000">modified:   src/store/modules/auth/auth.js</font>
+    <font color="#CC0000">modified:   vue.config.js</font>
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)
+<font color="#8AE234"><b>mamun@mamun-pc</b></font>:<font color="#729FCF"><b>/var/www/html/microfinnext-frontend</b></font>$ 
+</pre>
+        <p><br></p>
+        <!-- ====================================================== -->        
+        <h6 id="section_3_3_8">3.3.8.   Project</h6>
+        <p>Build a branching model as depicted in this figure</p>
+        <img src="https://techntuts.com/html/devops/git_files/image113.png" alt="Project in Git" style="width:100%">
+        <p><br></p>
+        <ol>
+            <li>Start with the production branch and then create a HotFix branch and Integration branch</li>
+            <li>Subsequently have Feature 1 and 2 branches that integrate as shown in figure</li>
+            <li>Ultimately integrate all features into HotFix branch and then to Production branch</li>
+        </ol>
+        <p><br></p>
+        <!-- ====================================================== -->        
+</body>
+</html>
