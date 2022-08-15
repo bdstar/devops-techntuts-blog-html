@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0 DevOps Tutorial</title>
+</head>
+<body>
+    <div style="background-color: #f0f0f0; padding: 5px 10px; border: 1px solid green; border-radius: 10px;">
+        <h6>DevOps Tutorial Outline:-</h6>
+        <ol>
+            <li><strong><a title="DevOps-1: Introduction to DevOps" href="../../../story/DevOps-Introduction-to-DevOps" target="_blank">DevOps-1: Introduction to DevOps</a></strong></li>
+            <li><strong><a title="DevOps-2:&nbsp;Learn about Linux" href="../../../story/DevOps-Learn-about-Linux" target="_blank">DevOps-2:&nbsp;Learn about Linux</a></strong></li>
+            <li><strong><a title="DevOps-3:&nbsp;Version Control System [Git]" href="../../../story/DevOps-Version-Control-System-Git" target="_blank">DevOps-3:&nbsp;Version Control System [Git]</a></strong></li>
+            <li><strong><a title="DevOps-4:&nbsp;Source Code Management (SCM) [Github]" href="../../../story/DevOps-Source-Code-Management-SCM-Github" target="_blank">DevOps-4:&nbsp;Source Code Management (SCM) [Github]</a></strong></li>
+            <li><strong><a title="DevOps-5:&nbsp;CI/CD [Jenkins]" href="../../../story/DevOps--CI-CD-Jenkins" target="_blank">DevOps-5:&nbsp;CI/CD [Jenkins]</a></strong></li>
+            <li><strong><a title="DevOps-6:&nbsp;Software and Automation Testing Framework [Selenium]" href="../../../story/DevOps-Software-and-Automation-Testing-Framework-Selenium" target="_blank">DevOps-6:&nbsp;Software and Automation Testing Framework [Selenium]</a></strong></li>
+            <li><strong><a title="DevOps-7:&nbsp;Configuration Management [Ansible]" href="../../../story/DevOps-Configuration-Management-Ansible" target="_blank">DevOps-7:&nbsp;Configuration Management [Ansible]</a></strong></li>
+            <li><strong><a title="DevOps-8:&nbsp;Containerization [Docker]" href="../../../story/DevOps-Containerization-Docker" target="_blank">DevOps-8:&nbsp;Containerization [Docker]</a></strong></li>
+            <li style="background-color: yellow;"><strong><a title="DevOps-9:&nbsp;Continuous Monitoring [Nagios]" href="../../../story/DevOps-Continuous-Monitoring-Nagios" target="_blank">DevOps-9:&nbsp;Continuous Monitoring [Nagios]</a></strong></li>
+            <li><strong><a title="DevOps-10:&nbsp;Continuous Orchestration [Kubernetes]" href="../../../story/DevOps-Continuous-Orchestration-Kubernetes" target="_blank">DevOps-10:&nbsp;Continuous Orchestration [Kubernetes]</a></strong></li>
+        </ol>
+    </div>    
+
+    <hr style="border: 1px solid inset;">
+
+    <h6 style="margin-top: 20px;">DevOps-9:&nbsp;Continuous Monitoring [Nagios] - Outline</h6>
+    <ul style="list-style: none;">
+        <li><span>9.1:  </span> <strong><a href="#section_9_1">Learning Objectives</a></strong></li>
+        <li><span>9.2:  </span> <strong><a href="#section_9_2">Overview of Continuous Monitoring</a></strong></li>
+        <li><span>9.3:  </span> <strong><a href="#section_9_3">Nagios Overview</a></strong></li>
+        <li><span>9.4:  </span> <strong><a href="#section_9_4">Nagios Plugins</a></strong></li>
+        <li><span>9.5:  </span> <strong><a href="#section_9_5">Monitoring with Nagios</a></strong></li>
+        <li><span>9.6:  </span> <strong><a href="#section_9_6">ELK Stack Overview</a></strong></li>
+        <li><span>9.7:  </span> <strong><a href="#section_9_7">Demo - Monitoring Using ELK Stack</a></strong></li>                      
+    </ul>
+              
+    <hr style="border: 1px solid inset;">
+
+    <!-- ====================================================== -->  
+    <h5 id="section_9_1">9.1.   Learning Objectives</h5>
+    <p>The organization is working on a project which contains the concept of Continuous Monitoring.</p>
+    <p><strong>Objective:</strong></p>
+    <ul>
+        <li>Overview of Continuous Monitoring</li>
+        <li>Purpose of Nagios and Nagios Plugins</li>
+        <li>Monitoring Tools</li>
+    </ul>
+    <p><br></p>
+    <!-- ====================================================== -->  
+    <h5 id="section_9_2">2.2.   Overview of Continuous Monitoring</h5>
+    <p>Continuous Monitoring is the ability to detect risk, compliance, and security issues in an operational environment. It acts as an auditing tool, where it can navigate through old monitoring data to analyze and improve the performance of the system.</p>
+    <p><strong>The roles of Continuous Monitoring are:</strong></p>
+    <ul>
+        <li>Assists in the design of a reliable system</li>
+        <li>Displays application behavior during peak business hours</li>
+        <li>Reduces cost by acquiring precise knowledge of software asset duplication</li>
+        <li>Reduces the chance of an application going down</li>
+        <li>Notifies you if there is a problem with your application service</li>
+        <li>Retrieves and analyzes historical data</li>
+    </ul>
+    <p><br></p>
+    <p><strong>Types of Continuous Monitoring,</strong></p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image001.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <p><br></p>
+    <p><strong>The deals with the monitoring of:</strong></p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image002.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image003.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image004.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <p><br></p>
+    <p><strong>There are several tools available for Continuous Monitoring,</strong></p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image005.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <p><br></p>
+    <!-- ====================================================== -->
+    <h5 id="section_9_3">9.3.   Nagios Overview</h5>
+    <p>Nagios is an open-source continuous monitoring program for system, network and IT infrastructure monitoring. It is available in two variants,</p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image007.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <p>Nagios Core is an open-source product, whereas Nagios XI is a licensed version.</p>
+    <p><strong>Advantages of Nagios:</strong></p>
+    <ul>
+        <li>Finds any type of network issue</li>
+        <li>Monitors the infrastructure actively</li>
+        <li>Facilitates automatic problem resolution</li>
+        <li>Troubleshoots server performance issues</li>
+    </ul>
+    <p><strong>Features of Nagios:</strong></p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image008.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <p><strong>Nagios Architecture:</strong> It uses a client-server architecture.</p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image009.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image010.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <p>The scheduler sends a signal to execute the plugins at the remote host. The plugin gets the status from the remote host. The scheduler updates the user interface and notification are sent to the admin.</p>
+    <p><br></p>
+    <!-- ====================================================== -->
+    <h5 id="section_9_4">9.4.   Nagios Plugins</h5>
+    <p>Plugins are compiled executable or scripts(perl/shell) that can be run from the command line. Plugins allow the user to monitor database. They are standalone extensions to Nagios Core.</p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image011.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <ul>
+        <li><strong>Official Plugins:</strong> These plugins are developed by the official Nagios Plugins team.</li>
+        <li><strong>Community Plugins:</strong> These plugins are developed by hundreds of Nagios community members.</li>
+        <li><strong>Custom Plugins:</strong> These plugins are developed by users in order to suit their environment.</li>
+    </ul>
+    <p>Configuration plugins on Remote Nodes:</p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image012.jpg" alt="Continuous Monitoring" style="width:60%" >
+    <p>There are the two types of installation:</p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image013.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <p><br></p>
+    <!-- ====================================================== -->    
+    <h6 id="section_9_5">9.5.   Monitoring with Nagios</h6>
+    <p>Nagios implements monitoring by using the default plugins. There are some default plugins available to monitor devices and services.</p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image014.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <p><stron>Default Plugins:</stron> The Nagios exchange website offers a number of additional plugins developed by users. </p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image015.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <p><br></p>
+    <!-- ====================================================== --> 
+    <h6 id="section_9_6">9.6.   ELK Stack Overview</h6>
+    <p>ELK stack is an open-source, distributed monitoring solution sittable for almost any structured and unstructured data source. ELK is the acronym for three open-source projects:</p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image016.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <p><strong>The main components of ELK stack are:</strong></p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image017.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <p><strong>Elasticsearch:</strong> It is distributed search and analytics engine analytics for data. It is highly scalable.</p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image018.jpg" alt="Continuous Monitoring" style="width:60%" >
+    <p><strong>Logstash:</strong> Data processing component and it collect data from various sources.</p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image019.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <p><strong>Kibana:</strong> It is a data visualization tool. It provides the graphical user interface for Elasticsearch. It has – Ease of use, Ease of conversion, Ease of analyzing complex data.</p>
+    <p><strong>Beats:</strong> Beats are lightweight data collectors. These are installed directly on the data source. The most frequently used data collectors are:</p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image020.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <p><strong>Benefits of ELK Stack:</strong></p>
+    <ul>
+        <li>Views stats to detect defects in application</li>
+        <li>Collects logs from servers and applications that can be analyzed for improvement</li>
+        <li>Backup of monitoring stats and able to store our monitoring system.</li>
+        <li>Combination of Elasticsearch, Logstash, and kibana.</li>
+        <li>A set of utilities provide the most powerful analytics for the business.</li>
+    </ul>
+    <p><br></p>                
+    <!-- ====================================================== -->            
+    <h5 id="section_9_7">9.7.   Demo - Monitoring Using ELK Stack</h5>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image021.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <a href="https://github.com/WorkstationG/ELKExample" target="_blank">https://github.com/WorkstationG/ELKExample</a>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image022.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image023.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image024.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image025.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <p>Open <strong> kibana</strong> <span>to your web browser: </span>
+    <a href="http://localhost:5601/app/kibana" target="_blank">http://localhost:5601/app/kibana</a>
+    </p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image026.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <p>In your 
+        <strong>localhost login to Jenkins:</strong>
+        <a href="http://localhost:8080/login" target="_blank">http://localhost:8080/login</a>
+    </p>
+    <p><strong>Dashborad>Credentials>System>Add Global credential</strong> from Jenkins,</p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image027.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <p>Create an “pipeline” item,</p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image028.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image029.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image030.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image031.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <p><br></p>
+    <p><strong>In the command line,</strong></p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image032.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <p>Now go back to the jenkin item “SpringBootApplicationDocker” and click on “build now” to build the Jenkins job and to deploy the Docker container on the Docker host.</p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image033.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <p>You can see that Jenkins pipeline has completed the build and the deployment process for the SprintBootApplicationDocker.</p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image034.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image035.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <p><strong>Now go back to your terminal,</strong></p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image036.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <p>Now navigate to your web browser and explore different page for your Spring boot application,</p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image037.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <p>Now go to the <strong>kibana dashboard, Management>Index Management –</strong>to the log result for your application,</p>
+    <img src="https://techntuts.com/html/devops/9_devops_nagios_files/image038.jpg" alt="Continuous Monitoring" style="width:100%" >
+    <p>In this way we can perform the monitoring by <strong>ELK Stack.</strong></p>
+    <p><br></p>
+    <!-- ====================================================== -->      
+
+</body>
+</html>

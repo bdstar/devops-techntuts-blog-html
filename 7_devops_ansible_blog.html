@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0 DevOps Tutorial</title>
+</head>
+<body>
+    <div style="background-color: #f0f0f0; padding: 5px 10px; border: 1px solid green; border-radius: 10px;">
+        <h6>DevOps Tutorial Outline:-</h6>
+        <ol>
+            <li><strong><a title="DevOps-1: Introduction to DevOps" href="../../../story/DevOps-Introduction-to-DevOps" target="_blank">DevOps-1: Introduction to DevOps</a></strong></li>
+            <li><strong><a title="DevOps-2:&nbsp;Learn about Linux" href="../../../story/DevOps-Learn-about-Linux" target="_blank">DevOps-2:&nbsp;Learn about Linux</a></strong></li>
+            <li><strong><a title="DevOps-3:&nbsp;Version Control System [Git]" href="../../../story/DevOps-Version-Control-System-Git" target="_blank">DevOps-3:&nbsp;Version Control System [Git]</a></strong></li>
+            <li><strong><a title="DevOps-4:&nbsp;Source Code Management (SCM) [Github]" href="../../../story/DevOps-Source-Code-Management-SCM-Github" target="_blank">DevOps-4:&nbsp;Source Code Management (SCM) [Github]</a></strong></li>
+            <li><strong><a title="DevOps-5:&nbsp;CI/CD [Jenkins]" href="../../../story/DevOps--CI-CD-Jenkins" target="_blank">DevOps-5:&nbsp;CI/CD [Jenkins]</a></strong></li>
+            <li><strong><a title="DevOps-6:&nbsp;Software and Automation Testing Framework [Selenium]" href="../../../story/DevOps-Software-and-Automation-Testing-Framework-Selenium" target="_blank">DevOps-6:&nbsp;Software and Automation Testing Framework [Selenium]</a></strong></li>
+            <li style="background-color: yellow;"><strong><a title="DevOps-7:&nbsp;Configuration Management [Ansible]" href="../../../story/DevOps-Configuration-Management-Ansible" target="_blank">DevOps-7:&nbsp;Configuration Management [Ansible]</a></strong></li>
+            <li><strong><a title="DevOps-8:&nbsp;Containerization [Docker]" href="../../../story/DevOps-Containerization-Docker" target="_blank">DevOps-8:&nbsp;Containerization [Docker]</a></strong></li>
+            <li><strong><a title="DevOps-9:&nbsp;Continuous Monitoring [Nagios]" href="../../../story/DevOps-Continuous-Monitoring-Nagios" target="_blank">DevOps-9:&nbsp;Continuous Monitoring [Nagios]</a></strong></li>
+            <li><strong><a title="DevOps-10:&nbsp;Continuous Orchestration [Kubernetes]" href="../../../story/DevOps-Continuous-Orchestration-Kubernetes" target="_blank">DevOps-10:&nbsp;Continuous Orchestration [Kubernetes]</a></strong></li>
+        </ol>
+    </div>
+
+    <hr style="border: 1px solid inset;">
+
+    <h6 style="margin-top: 20px;">DevOps-7:&nbsp;Configuration Management [Ansible] - Outline</h6>
+    <ul style="list-style: none;">
+        <li><span>7.1:  </span> <strong><a href="#section_7_1">Learning Objectives</a></strong></li>
+        <li><span>7.2:  </span> <strong><a href="#section_7_2">Overview of Configuration Management</a></strong></li>
+        <li><span>7.3:  </span> <strong><a href="#section_7_3">Roles of Configuration Management Tools</a></strong></li>
+        <li><span>7.4:  </span> <strong><a href="#section_7_4">Popular Configuration Management Tools</a></strong></li>
+        <li><span>7.5:  </span> <strong><a href="#section_7_5">Ansible Overview</a></strong></li>
+        <li><span>7.6:  </span> <strong><a href="#section_7_6">Components of Ansible</a></strong></li>
+        <li><span>7.7:  </span> <strong><a href="#section_7_7">YAML Scripting</a></strong></li>
+        <li><span>7.8:  </span> <strong><a href="#section_7_8">Demo - Setup Apache Server with Ansible</a></strong></li>
+        <li><span>7.9:  </span> <strong><a href="#section_7_9">Terraform Overview</a></strong></li> 
+        <li><span>7.10:  </span> <strong><a href="#section_7_10">Demo - S3 Bucket Creation Using Terraform</a></strong></li>                        
+    </ul>
+              
+    <hr style="border: 1px solid inset;">
+
+    <!-- ====================================================== -->  
+    <h5 id="section_7_1">7.1.   Learning Objectives</h5>
+    <p>Need to automate an infrastructure to manage all the running service form one place. It’s provided an access model control based upon the organization, teams and users.</p>
+    <p><strong>Ansible:</strong>Ansible is an open-source software provisioning, configuration management, and application-deployment tool enabling infrastructure as code. It can configuration of tools between service assets and configuration items.</p>
+    <p><strong>YAML Scripting:</strong> YAML is a data serialization language that is often used for writing configuration files.</p>
+    <p><strong>Terraform:</strong> Terraform is an open-source infrastructure as code software tool that enables you to safely and predictably create, change, and improve infrastructure.</p>
+    <p><br></p>
+    <!-- ====================================================== -->  
+    <h5 id="section_7_2">7.2.   Overview of Configuration Management</h5>
+    <p><strong>Configuration Management:</strong> It is a system engineering method that ensures a product’s characteristics remain consistent during its life cycle. It may cover non-IT assets and work products used to develop services. It provides a configuration model of the services, assets and infrastructure by recording the relationship between-</p>
+    <ul>
+        <li>Service assets</li>
+        <li>configuration items</li>
+        <li>Controlled environments</li>
+        <li>Operational use</li>
+    </ul>
+    <p>Any change in configuration can dramatically impact to <b>(1) Performance (2) Security (3) Functionality</b></p>
+    <img src="https://techntuts.com/html/devops/7_devops_ansible_files/image001.jpg" alt="Configuration Management" style="width:100%" >
+    <p>It comprises any aspect that requires management is delivering an IT service.</p>
+    <ul>
+        <li>Maintains information and relationship</li>
+        <li>Ensure information is maintained.</li>
+    </ul>
+    <p>The configuration management application:</p>
+    <ul>
+        <li>Identifies</li>
+        <li>Defines</li>
+        <li>Tracks</li>
+    </ul>
+    <p>These records can be accessed from a central repository by other service manager application.</p>
+    <p><br></p>
+    <!-- ====================================================== -->
+    <h5 id="section_7_3">7.3.   Roles of Configuration Management Tools</h5>
+    <p><strong>Configuration management tools allow modifications and deployments-</strong></p>
+    <ul>
+        <li>Scalable</li>
+        <li>Predictable</li>
+        <li>Faster</li>
+        <li>Repeatable</li>
+    </ul>
+    <p><br></p>
+    <p><strong>Advantages of using configuration management tools includes:</strong></p>
+    <ul>
+        <li>Increase the efficiency with a well-defined configuration process that improves visibility</li>
+        <li>Optimize cost by having detailed knowledge of all the IT elements.</li>
+        <li>Track requirements form specification to testing</li>
+        <li>Identify and control software versions.</li>
+        <li>Enhances system and process reliability by detection effects</li>
+        <li>Manage the information about the configuration item</li>
+        <li>Provides faster restoration of your service if a process failure occurs</li>
+        <li>Facilitate the conduct of functional configuration audits</li>
+    </ul>
+    <p><br></p>
+    <p><strong>Role of Configuration Management tools in DevOps and Ansible as an IT automation engine:</strong></p>  
+    <ul>
+        <li>Cloud Provisioning</li>
+        <li>Configuration management</li>
+        <li>Application Deployment</li>
+        <li>Intra-service Orchestration</li>
+    </ul>
+    <p><br></p>
+    <!-- ====================================================== -->
+    <h5 id="section_7_4">7.4.   Popular Configuration Management Tools</h5>
+    <p>There are several tools available for configuration management. Every tool has specific features to improve it for certain situations. The top 4 management tools for configuration are:</p>
+    <img src="https://techntuts.com/html/devops/7_devops_ansible_files/image002.jpg" alt="Configuration Management" style="width:70%" >
+    <br>
+    <strong>SaltStack:</strong> Python-based open-source CM tool used to remotely manage configuration items.<br>
+    <strong>Ansible:</strong> Python based CM tool, also considered as agentless CM tool.<br>
+    <strong>Chef:</strong> Ruby based CM tool having integration with most of the cloud-based platforms.<br>
+    <strong>Puppet:</strong> Ruby DSL-based CM tool used for managing software, system, and network configuration items.
+    <p><br></p>
+    <!-- ====================================================== -->    
+    <h6 id="section_7_5">7.5.   Ansible Overview</h6>
+    <img src="https://techntuts.com/html/devops/7_devops_ansible_files/image003.jpg" alt="Ansible Overview" style="width:60%" >
+    <p><strong>It models the interaction between all your systems in your IT architecture.</strong></p>
+    <ul>
+        <li>Uses playbook to describe automation jobs which are written in YAML.</li>
+        <li>Designed for multi-tire deployment</li>
+        <li>Models IT infrastructure by interrelation all the systems.</li>
+        <li>Constructure for multi-level use from the ground up.</li>
+    </ul>
+    <p><strong>There are multiple ways to install Ansible,</strong></p>
+    <ul>
+        <li>yum</li>
+        <li>apt-get</li>
+        <li>git checkout</li>
+        <li>pip</li>
+    </ul>
+    <p>The below command to check and find the dependencies of the packages,</p>
+<pre class="code">
+$ sudo apt-get install -f
+</pre>
+    <p>The below command is used to update package repositories and get latest package information,</p>
+<pre class="code">
+$ sudo apt-get install software properties-common
+</pre>
+    <p>Run commands to update the list of available software once again and install Ansible. It also pulls down Ansible PPA’s signing key and adds it to your system.</p>
+<pre class="code">
+$ sudo apt-add-repository ppa:ansible/ansible
+</pre>
+    <p>Download package information from all configured sources,</p>
+<pre class="code">
+$ sudo apt-get update <br>
+
+$ sudo apt-get install ansible
+</pre>
+    <p>Now install ansible is completed.</p>
+    <p><br></p>
+    <!-- ====================================================== --> 
+    <h6 id="section_7_6">7.6.   Components of Ansible</h6>
+    <p>These are the six components of Ansible,</p>
+    <ol>
+        <li><strong>Modules:</strong> Ansible connects to nodes and sends scripts known as Ansible Modules. User can write their own modules. Most modules accept parameters that define the system’s desired state.</li>
+        <li><strong>Module utilities:</strong> Ansible stores function as module utilities when several modules use the same code, to reduce duplication and maintenance.</li>
+        <li><strong>Plugins:</strong> Ansible’s core functionality is augmented by plugins. Plugin execute on the control node within the <u> /usr/bin/ansible</u> method. Ansible comes with many useful plugins and can also be created.</li>
+        <li><strong>Inventory:</strong> It is a configuration file where user defines the host information. It is a text file that contains a list of servers or nodes that the user manages and configures.</li>
+        <li><strong>Playbooks:</strong> It is a blueprint of automation tasks, which are complex IT tasks with no human intervention. The playbooks are simply frameworks or per-written code. The script or instructions are written in YAML format.</li>
+        <li><strong>The Ansible search path:</strong> Modules, module utilities, plugins, playbook and tasks can all be stored in different location. Several files with similar or identical names in different location can be available on the Ansible control node. Search path decides which of these files Ansible can find and use.</li>
+    </ol>
+    <p><br></p>                
+    <!-- ====================================================== -->            
+    <h5 id="section_7_7">7.7.   YAML Scripting</h5>
+    <p>YAML syntax is simpler for humans to read and write than other popular data formats like XML or JSON. Hence, Ansible uses it to express Ansible playbook.</p>
+    <ul>
+        <li>Any YAML file begins with a list of items</li>
+        <li>Every item in the list is a key or value pair list, also known as a hash or dictionary</li>
+        <li>Every YAML file optionally start with –and ends with <b>…</b> </li>
+    </ul>
+    <p>Sample of YAML writing:</p>
+<pre class="code">
+--- #Optional YAML Start Syntax
+James:
+        Name: james john
+        Rollno: 34
+        Div: B
+        Sex: male
+… #Optional YAML End Syntax
+</pre>
+<p>Basic rule to write YAML file,</p>
+    <ul>
+        <li>YAML is case-sensitive</li>
+        <li>The files should have .yaml as the extension.</li>
+        <li>YAML doesn’t allow the use of tabs while crating YAML files; spaces are allowed instead.</li>
+    </ul>
+    <p><br></p>
+    <!-- ====================================================== -->     
+    <h5 id="section_7_8">7.8.   Demo - Setup Apache Server with Ansible</h5>
+    <p>To setup Apache Server with Ansible,</p>
+<pre class="code">
+$ sudo apt-get install -f <br>
+
+$ sudo apt-get install software-properties-common <br>
+
+$ sudo apt-add-repository ppa:ansible/ansible
+</pre>
+<img src="https://techntuts.com/html/devops/7_devops_ansible_files/image004.jpg" alt="Ansible" style="width:100%" >
+<pre class="code">
+$ sudo apt-get update <br>
+
+$ sudo apt-get install ansible
+</pre>
+<img src="https://techntuts.com/html/devops/7_devops_ansible_files/image005.jpg" alt="Ansible" style="width:100%" >
+<pre class="code">
+$ ssh-keygen -t rsa <br>
+
+$ cat .ssh/id_rsa.pub >> .ssh/authorized_keys <br>
+
+$ ssh localhost -p 42006
+</pre>
+<img src="https://techntuts.com/html/devops/7_devops_ansible_files/image006.jpg" alt="Ansible" style="width:100%" >
+<pre class="code">
+$ sudo vi /etc/ansible/hosts
+</pre>
+<img src="https://techntuts.com/html/devops/7_devops_ansible_files/image007.jpg" alt="Ansible" style="width:100%" >
+<pre class="code">
+$ ansible -m ping webservers <br>
+
+$ sudo vi apache2.yaml
+</pre>
+<img src="https://techntuts.com/html/devops/7_devops_ansible_files/image008.jpg" alt="Ansible" style="width:100%" >
+<img src="https://techntuts.com/html/devops/7_devops_ansible_files/image009.jpg" alt="Ansible" style="width:60%" >
+<pre class="code">
+$ anisble-playbook apache2.yaml
+</pre>
+<img src="https://techntuts.com/html/devops/7_devops_ansible_files/image010.jpg" alt="Ansible" style="width:100%" >
+<pre class="code">
+$ ansible -m shell -a “service apache2 status” webservers
+</pre>
+<img src="https://techntuts.com/html/devops/7_devops_ansible_files/image011.jpg" alt="Ansible" style="width:100%" >
+
+<p><br></p>
+    <!-- ====================================================== -->     
+    <h5 id="section_7_9">7.9.   Terraform Overview</h5>
+    <p>Terraform is a popular service provider. It uses configuration files to specify the components required to run a single application or an entire datacenter. Terraform create an execution plan that explains how it will get to the target state and then executes it to build the infrastructure indicated.</p>
+    <p>Terraform can determine what has changed and develop incremental implementation plans.</p>
+    <img src="https://techntuts.com/html/devops/7_devops_ansible_files/image012.jpg" alt="Ansible" style="width:70%" >
+    <p>The key features of Terraform are:</p>
+    <ol>
+        <li><strong>Infrastructure as Code:</strong> Uses a high-level configuration syntax. Allows a blueprint of your datacenter. Infrastructure can be shared and reused. The infrastructure Terraform can manage:
+            <p>The infrastructure Terraform can manage:</p>
+            <ul>
+            <li><strong>Low-level Components:</strong>
+            <ul>
+                <li>Compute instances</li>
+                <li>Storage</li>
+                <li>Networking</li>
+            </ul>
+            </li>
+            <li><strong>High-level Components:</strong>
+            <ul>
+                <li>Domain name system entries</li>
+                <li>SaaS features, etc.</li>
+            </ul>
+            </li>
+            </ul>
+        </li>
+        <li><strong>Execution Plans:</strong> It shows what Terraform will do when you can apply. The prevents unexpected manipulation of Terraform infrastructure.</li>
+        <li><strong>Resource Graph:</strong> It is a graph of all resource which parallelizes any non-dependent resource.</li>
+        <li><strong>Change Automation:</strong> Change sheets in Terraform provide information and a sequence of what changes will be made.</li>
+    </ol>
+    <p><br></p>
+    <!-- ====================================================== -->  
+    <h5 id="section_7_10">7.10.   Demo - S3 Bucket Creation Using Terraform</h5>
+<pre class="code">
+$ pip install awscli <br>
+
+$ sudo apt-get update <br>
+
+$ mkdir s3back <br>
+
+$ cd s3back <br>
+
+$ nano creds.tf
+</pre>
+    <img src="https://techntuts.com/html/devops/7_devops_ansible_files/image013.jpg" alt="Ansible" style="width:100%" >
+    <p><strong>creds.tf</strong> file is below,</p>
+    <img src="https://techntuts.com/html/devops/7_devops_ansible_files/image014.jpg" alt="Ansible" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/7_devops_ansible_files/image015.jpg" alt="Ansible" style="width:100%" >
+    <p><br></p>
+    <p><strong>nano main.tf</strong> file is below,</p>
+    <img src="https://techntuts.com/html/devops/7_devops_ansible_files/image016.jpg" alt="Ansible" style="width:40%" >
+    <p><br></p>
+<pre class="code">
+$ teffaform init
+</pre>
+    <img src="https://techntuts.com/html/devops/7_devops_ansible_files/image017.jpg" alt="Ansible" style="width:100%" >
+<pre class="code">
+$ terraform plan <br>
+
+$ terraform apply
+</pre>
+<img src="https://techntuts.com/html/devops/7_devops_ansible_files/image018.jpg" alt="Ansible" style="width:100%" >
+    <p><br></p>
+    <p>Now open AWS panel and you can see your bucket,</p>
+    <p><br></p>
+    <img src="https://techntuts.com/html/devops/7_devops_ansible_files/image019.jpg" alt="Ansible" style="width:100%" >
+    <!-- ====================================================== -->        
+
+</body>
+</html>

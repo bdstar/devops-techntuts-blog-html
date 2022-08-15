@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0 DevOps Tutorial</title>
+</head>
+<body>
+    <div style="background-color: #f0f0f0; padding: 5px 10px; border: 1px solid green; border-radius: 10px;">
+        <h6>DevOps Tutorial Outline:-</h6>
+        <ol>
+            <li><strong><a title="DevOps-1: Introduction to DevOps" href="../../../story/DevOps-Introduction-to-DevOps" target="_blank">DevOps-1: Introduction to DevOps</a></strong></li>
+            <li><strong><a title="DevOps-2:&nbsp;Learn about Linux" href="../../../story/DevOps-Learn-about-Linux" target="_blank">DevOps-2:&nbsp;Learn about Linux</a></strong></li>
+            <li><strong><a title="DevOps-3:&nbsp;Version Control System [Git]" href="../../../story/DevOps-Version-Control-System-Git" target="_blank">DevOps-3:&nbsp;Version Control System [Git]</a></strong></li>
+            <li><strong><a title="DevOps-4:&nbsp;Source Code Management (SCM) [Github]" href="../../../story/DevOps-Source-Code-Management-SCM-Github" target="_blank">DevOps-4:&nbsp;Source Code Management (SCM) [Github]</a></strong></li>
+            <li style="background-color: yellow;"><strong><a title="DevOps-5:&nbsp;CI/CD [Jenkins]" href="../../../story/DevOps--CI-CD-Jenkins" target="_blank">DevOps-5:&nbsp;CI/CD [Jenkins]</a></strong></li>
+            <li><strong><a title="DevOps-6:&nbsp;Software and Automation Testing Framework [Selenium]" href="../../../story/DevOps-Software-and-Automation-Testing-Framework-Selenium" target="_blank">DevOps-6:&nbsp;Software and Automation Testing Framework [Selenium]</a></strong></li>
+            <li><strong><a title="DevOps-7:&nbsp;Configuration Management [Ansible]" href="../../../story/DevOps-Configuration-Management-Ansible" target="_blank">DevOps-7:&nbsp;Configuration Management [Ansible]</a></strong></li>
+            <li><strong><a title="DevOps-8:&nbsp;Containerization [Docker]" href="../../../story/DevOps-Containerization-Docker" target="_blank">DevOps-8:&nbsp;Containerization [Docker]</a></strong></li>
+            <li><strong><a title="DevOps-9:&nbsp;Continuous Monitoring [Nagios]" href="../../../story/DevOps-Continuous-Monitoring-Nagios" target="_blank">DevOps-9:&nbsp;Continuous Monitoring [Nagios]</a></strong></li>
+            <li><strong><a title="DevOps-10:&nbsp;Continuous Orchestration [Kubernetes]" href="../../../story/DevOps-Continuous-Orchestration-Kubernetes" target="_blank">DevOps-10:&nbsp;Continuous Orchestration [Kubernetes]</a></strong></li>
+        </ol>
+    </div>
+
+    <hr style="border: 1px solid inset;">
+
+    <h6 style="margin-top: 20px;">DevOps-5:&nbsp;CI/CD [Jenkins] - Outline</h6>
+    <ul style="list-style: none;">
+        <li><span>5.1:  </span> <strong><a href="#section_5_1">Learning Objectives</a></strong></li>
+        <li><span>5.2:  </span> <strong><a href="#section_5_2">Overview of CI/CD</a></strong></li>
+        <li><span>5.3:  </span> <strong><a href="#section_5_3">Popular CI/CD Tools</a></strong></li>
+        <li><span>5.4:  </span> <strong><a href="#section_5_4">Introduction to Jenkins</a></strong></li>
+        <li><span>5.5:  </span> <strong><a href="#section_5_5">Setting Up Jenkins</a></strong></li>
+        <li><span>5.6:  </span> <strong><a href="#section_5_6">Integrate Jenkins with Tools Like Git and Maven</a></strong></li>
+        <li><span>5.7:  </span> <strong><a href="#section_5_7">Job Types in Jenkins</a></strong></li>
+        <li><span>5.8:  </span> <strong><a href="#section_5_8">Scheduling Jenkins Jobs</a></strong></li>
+        <li><span>5.9:  </span> <strong><a href="#section_5_9">Build Tools and Their Usage</a></strong></li>
+        <li><span>5.10:  </span> <strong><a href="#section_5_10">Demo - Continuous Integration with Maven</a></strong></li> 
+        <li><span>5.11:  </span> <strong><a href="#section_5_11">Quick Recap</a></strong></li>                
+    </ul>
+
+    <hr style="border: 1px solid inset;">
+
+    <!-- ====================================================== -->  
+    <h5 id="section_5_1">5.1.   Learning Objectives</h5>
+    <p>A CI/CD pipeline automates the software delivery process.</p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image001.jpg" alt="Introduction to Jenkins" style="width:100%" >
+    <p><br></p>
+    <p>Some of the CI/CD tools,</p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image002.jpg" alt="Introduction to Jenkins" style="width:100%" >
+    <p><br></p>
+    <p>Jenkins perform different roles,</p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image003.jpg" alt="Introduction to Jenkins" style="width:100%" >
+    <p><br></p>
+    <p>Achieve CI with Jenkins, using Git and Maven</p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image004.jpg" alt="Introduction to Jenkins" style="width:100%" >
+    <p><br></p>
+    <!-- ====================================================== -->  
+    <h5 id="section_5_2">5.2.   Overview of CI/CD</h5>
+    <p>A CI/CD process automates your software delivery process. Automated pipelines remove manual errors and provide standardized feedback loops.</p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image005.jpg" alt="Introduction to Jenkins" style="width:100%" >
+    <p><strong><u>Continuous Integration:</u> </strong>It is a development practice in which all development work is integrated as early as possible.</p>
+    <ul>
+        <li>Needs to commit the changes at regular intervals</li>
+        <li>Requires regular builds</li>
+        <li>When a code commit occurs, a build should be triggered.</li>
+    </ul>
+    <p>Now, question arise – What tasks must be performed to achieve Continuous Integration?</p>
+    <p>The list of tasks involved in the Continuous Integration: -</p>
+    <ul>
+        <li>Generating and analyzing report</li>
+        <li>Developing and compiling</li>
+        <li>Performing functional test and labeling code</li>
+        <li>Performing unit test</li>
+        <li>Preproduction deployment</li>
+        <li>Database Integration</li>
+    </ul>
+    <p>Advantages of Continuous Integration</p>
+    <ul>
+        <li>Monitors the health of your code coverage metrics</li>
+        <li>Reduces technical debts and maintenance cost</li>
+        <li>Publicity visible code quality metrics</li>
+        <li>Automated end-to-end acceptance tests</li>
+        <li>Reduces risk providing faster feedback</li>
+        <li>Helps identify and fix integration and regression</li>
+        <li>Helps simplify and accelerate delivery</li>
+        <li>Automates deployment process</li>
+    </ul>
+    <p><strong><u>Continuous Delivery:</u> </strong>Continuous delivery is an extension of continuous integration. Any successful build can potentially be deployed into production. CD process is not automatic. Business team decides the best time to deliver the latest changes. In the implementation of CD, the goal is to make deployment.</p>
+    <p><strong><u>Continuous Deployment:</u> </strong>It deploys all the changes in the source code to production automatically without explicit approval from a developer. It is a software release strategy in which each code commit that passes automated testing is automatically sent to production.</p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image006.jpg" alt="Introduction to Jenkins" style="width:100%" >
+    <p><br></p>
+    <!-- ====================================================== -->
+    <h5 id="section_5_3">5.3.   Popular CI/CD Tools</h5>
+    <p>It is critical to select the best CI/CD tools for the project’s budget and needs.</p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image007.jpg" alt="Introduction to Jenkins" style="width:100%" >
+    <p>There are few prerequisites to implement the CI/CD pipeline,</p>
+    <ul>
+        <li>Automated build, test, package, and deploy operations.</li>
+        <li>Quick pipeline execution</li>
+        <li>Quick failure recovery</li>
+        <li>Zero-downtime deployment</li>
+        <li>Trunk-based development</li>
+    </ul>
+    <p><br></p>
+    <!-- ====================================================== -->
+    <h5 id="section_5_4">5.4.   Introduction to Jenkins</h5>
+    <p>Jenkins is an open-source and powerful automation tool that is written entirely in Java. It’s executing a series of action to achieve the continuous integration process and continuous delivery of software projects.</p>
+    <p>Jenkins community is one of the prime reasons for its popularity. It is not only extensible but it is also having a thriving plugin ecosystem.</p>
+    <p><strong>Benefits of Jenkins:</strong></p>
+    <ul>
+        <li>It is free and cost-effective tool</li>
+        <li>It is a highly portable application.</li>
+        <li>It can be easily installed and configured as per the required needs.</li>
+        <li>It has a very rich plugin library and global community support</li>
+        <li>It can be integrated with limitless other applications and tools</li>
+    </ul>
+    <p><strong>Process of achieving CI with Jenkins:</strong></p>
+    <ul>
+        <li>All the commits are built</li>
+        <li>Jenkins CI will check the builds</li>
+        <li>The build is fine, the executable code is ready for deployment</li>
+        <li>The team of developers who will commit changes at regular intervals are notified.</li>
+    </ul>
+    <p><strong>Multiple tools that can be integrated with Jenkins to implements each stage of the CI/CD pipeline:</strong></p>
+    <ul>
+        <li>Git, Stash and Visual Studio Code and Commit</li>
+        <li>Docker, Ansible, and others can be used to Build and Configure the application</li>
+        <li>Junit, Cucumber, and others can be user to scan the application for bugs and perform test.</li>
+        <li>Deploy and Serena can be used to release the application tools.</li>
+    </ul>
+    <p>To deploy the application, Cloud Service like AWS, Azure or platform like Openstack can be used.</p>
+    <p><strong>Bunch of different tasks can be done using Jenkins, like</strong></p>
+    <ul>
+        <li>Building – an application</li>
+        <li>Integrating – different components of an application</li>
+        <li>Deploying – an application</li>
+        <li>Reporting – issue in the application</li>
+        <li>Testing – testing bugs in the application</li>
+    </ul>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image008.jpg" alt="Introduction to Jenkins" style="width:100%" >
+    <p><strong>How to achieve CI with Jenkins?</strong></p>
+    <p>It is made sure that all commits are built. Jenkins CI then checks all the builds. The build works, then code is set for the deployment. Build doesn’t function as expected, the development team is notified. They rectify, update and make changes in the code. After its done all the commits are again built and this cycle goes on.</p>
+    <p><br></p>
+    <!-- ====================================================== -->    
+    <h6 id="section_5_5">5.5.   Setting Up Jenkins</h6>
+    <p>Jenkins is a Java-built open-source Continuous Integration (CI) and CD platform. Basically, Jenkins builds software projects, checks and deploys them.</p>
+    <p><strong><u>Prerequisites:-</u></strong></p>
+    <p><strong>Hardware Requirements:-</strong></p>
+    <ul>
+        <li>RAM- 4 GB (Recommended)</li>
+        <li>Storage- more than 50 GB of Hard Disk Space (Recommended)</li>
+    </ul>
+    <p><strong>Software Requirements:-</strong></p>
+    <ul>
+        <li><strong>Java:</strong> Java Development Kit (JDK) or Java Runtime Environment (JRE).</li>
+        <li><strong>Web Browser:</strong> Any browser such as Google Chrome, Mozilla Firefox, Microsoft Edge.</li>
+        <li><strong>Operating System:</strong> An Ubuntu 18.04 server installed with a non-root sudo user and firewall.</li>
+    </ul>
+    <p><strong>Installation Procedure (Linux):-</strong></p>
+    <ol>
+        <li>Check java version
+<pre class="code">
+$ java -version
+</pre>
+        </li>
+        <li>Install system update
+<pre class="code">
+$ sudo apt update<br>
+$ sudo dpkg --configure -a
+</pre>  
+        </li>
+        <li>Install Java
+<pre class="code">
+$ sudo apt install openjdk-8-jdk
+</pre>
+        </li>
+        <li>add the framework repository key:
+<pre class="code">
+$ wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add –
+</pre>
+        </li>
+        <li>Next, link the repository of Debian packages to the sources.list of the server:
+<pre class="code">
+$ sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+</pre>
+        </li>
+        <li>When both are in place, upgrade to apt to use the new repository:
+<pre class="code">
+$ sudo apt-get update
+</pre>
+        </li>
+        <li>Install Jenkins:
+<pre class="code">
+$ sudo apt-get install Jenkins
+</pre> 
+        </li>
+        <li>You can start Jenkins using systemctl:
+<pre class="code">
+$ sudo systemctl start jenkins
+</pre>
+        </li>
+        <li>As systemctl does not display performance, you can use the status command to check that Jenkins has successfully launched:
+<pre class="code">
+$ sudo systemctl status jenkins
+</pre>
+        </li>
+        <li><p>To set up your installation, visit Jenkins on its default port, 8080, using your server domain name or IP address: <a href="javascript: void(0)">http://your_server_ip_or_domain:8080</a> </p>
+            <p>In the terminal window, use the cat command to display the password:</p>
+<pre class="code">
+$ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+</pre>
+        </li>
+    </ol>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image009.jpg" alt="Introduction to Jenkins" style="width:100%" >
+    <p><br></p>
+    <p><strong>Installation Procedure (Windows 10):-</strong></p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/1y8RsUbxtAw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p><u>Reference:-</u></p>
+    <ul>
+        <li><a href="https://www.oracle.com/java/technologies/downloads/" target="_blank">https://www.oracle.com/java/technologies/downloads/</a></li>
+        <li><a href="https://www.jenkins.io/doc/book/installing/windows/" target="_blank">https://www.jenkins.io/doc/book/installing/windows/</a></li>
+    </ul>
+    <p><br></p>
+    <!-- ====================================================== --> 
+    <h6 id="section_5_6">5.6.   Integrate Jenkins with Tools Like Git and Maven</h6>
+    <p>Login Jenkin</p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image010.jpg" alt="Introduction to Jenkins" style="width:100%" >
+    <p><br></p>
+    <p>After login, in the dashboard left side, click “Mange Jenkins”,</p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image011.jpg" alt="Introduction to Jenkins" style="width:100%" >
+    <p><br></p> 
+    <p>From the list of options choose “Mange Plugins”,</p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image012.jpg" alt="Introduction to Jenkins" style="width:100%" >
+    <p><br></p> 
+    <p>You can see the “Updates”, “Available”, “Installed” and “Advanced” tab in the “Plugin Manager” page,</p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image013.jpg" alt="Introduction to Jenkins" style="width:100%" >
+    <p><br></p>
+    <p>In the “Available” tab Search and Install “Git Plugin”,</p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image014.jpg" alt="Introduction to Jenkins" style="width:100%" >
+    <p><br></p> 
+    <p><strong><u>Git</u></strong></p>
+    <p>Download git form below url, <a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/downloads</a>
+    </p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image015.jpg" alt="Introduction to Jenkins" style="width:100%" >
+    <p>Download, Install and configure Git to your local sytem.</p>
+    <p><br></p> 
+    <p><strong><u>Maven:-</u></strong></p>
+    <p>Download Maven from below url,
+    <a href="https://maven.apache.org/download.cgi" target="_blank">https://maven.apache.org/download.cgi</a>
+    <br>Download Binary zip archive(apache-maven-3.8.6-bin.zip)
+    </p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image016.jpg" alt="Jenkins" style="width:100%" >
+    <p>
+    Extract the folder and put on the C:\Program Files\apache-maven-3.8.6 <br>
+    Set the System Properties>Environment Variable> path into the C:\Program Files\apache-maven-3.8.6\bin
+    </p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image017.jpg" alt="Jenkins" style="width:100%" >
+    <p>Check maven version by command line and this information will help you in setting up the Global Tool Configuration,</p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image018.jpg" alt="Jenkins" style="width:100%" >
+    <p><br></p> 
+    <p>Now back to the Jenkins dashboard, Install the “Maven”</p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image019.jpg" alt="Jenkins" style="width:100%" >
+    <p><br></p> 
+    <p>You can see the download and install progress by following,</p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image020.png" alt="Jenkins" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image021.png" alt="Jenkins" style="width:100%" >
+    <p><br></p> 
+    <p>Select the “Global Tool Configuration”,</p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image022.jpg" alt="Jenkins" style="width:100%" >
+    <p><br></p> 
+    <p>Configure JDK by following,</p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image023.jpg" alt="Jenkins" style="width:100%" >
+    <p><br></p> 
+    <p>Configure “Git” by following,</p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image024.jpg" alt="Jenkins" style="width:100%" >
+    <p><br></p> 
+    <p>Configure “Maven” by following,</p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image025.jpg" alt="Jenkins" style="width:100%" >
+    <p>Now click “Save” to save all “Global Tool Configure”.</p>
+    <p><br></p>                
+    <!-- ====================================================== -->            
+    <h5 id="section_5_7">5.7.   Job Types in Jenkins</h5>
+    <p>You can create new build jobs by clicking on the “New Item” button,</p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image026.jpg" alt="Jenkins" style="width:100%" >
+    <p><br></p> 
+    <p>Types of build job in Jenkins,</p>
+    <ul>
+        <li>Freestyle Project</li>
+        <li>Maven Project</li>
+        <li>External job</li>
+        <li>Multi-configuration Project</li>
+        <li>Pipeline</li>
+        <li>Folder</li>
+        <li>GitHub Organization</li>
+        <li>Multibranch Pipeline</li>
+    </ul>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image027.jpg" alt="Jenkins" style="width:100%" >
+    <p><br></p>
+    <p>Jenkins Build Jobs: -</p>
+    <ul>
+        <li><strong>Poll SCM:</strong> It is also called Source Code Management which involves checking the version control server at regular intervals for any changes that have been committed.</li>
+        <li><strong>Webhook:</strong> It helps to transfer real-time data from one application to another, and provide your application a way of consuming new event data from an endpoint.</li>
+        <li><strong>Periodic Builds:</strong> It builds the project periodically even if nothing has changed. It might have tests that should be run periodically or an DB clean up Jenkins job or any other Jenkins job.</li>
+    </ul>
+    <p><br></p>
+    <!-- ====================================================== -->     
+    <h5 id="section_5_8">5.8.   Scheduling Jenkins Jobs</h5>
+    <p>Types of Scheduling Jenkins Jobs,</p>
+    <ul>
+        <li>Scheduled builds simply trigger your build job at regular intervals</li>
+        <li>This strategy can be used for regular nightly builds.</li>
+        <li>They can be done with something as simple as a simple as Unix cronjob.</li>
+        <li>Continuous integration requires faster feedback than scheduled builds.</li>
+        <li>Scheduled builds can be used for long running build jobs, where quick feedback is less critical.</li>
+    </ul>
+    <p>Jenkins uses cron-style syntax for scheduling the jobs.</p> 
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image028.jpg" alt="Jenkins" style="width:100%" >
+    <p>Shortcut syntaxes used for scheduling build jobs consist of notations, below are the examples,</p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image029.jpg" alt="Jenkins" style="width:100%" >
+    <p><br></p>
+    <!-- ====================================================== -->     
+    <h5 id="section_5_9">5.9.   Build Tools and Their Usage</h5>
+    <p>Jenkins requires build tools to integrate the changes made in the source code. 
+        <br>
+        The Advantages of build tools are:
+    </p>
+    <ul>
+        <li>Easy Configuration</li>
+        <li>Easy Support</li>
+        <li>Easy Integration</li>
+    </ul>
+    <p>Popular build tools include:</p>
+    <ul>
+        <li><strong>Apache Ant:</strong>It is a java-based tool. It is mainly used for building java-based application. Ant runs various built-in jobs, such as a compiling, assembly and test.</li>
+        <li><strong>Maven:</strong>It is a tool for managing software lifecycles and dependencies. Benefits of maven,
+        <ul>
+            <li>It can easily create a project</li>
+            <li>It is consistent across all the projects</li>
+            <li>It can connect a project to a source control system.</li>
+            <li>It can handle multiple projects simultaneously.</li>
+            <li>It follows a standard strategy.
+                <ul>
+                    <li><strong>Advantages: -</strong>
+                        <ol>
+                            <li>It can be automatically added all of the project’s dependencies.</li>
+                            <li>It can convert a project to war file format easily.</li>
+                            <li>It makes it simple to start a project in a variety of contexts.</li>
+                        </ol>
+                    </li>
+                    <li><strong>Disadvantages: -</strong>
+                    <ol>
+                        <li>Maven must be installed on the system before it can be used.</li>
+                        <li>Maven will not be able to add existing dependency if the maven code for it is not available</li>
+                    </ol>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        </li>
+    </ul>
+    <p><br></p>
+    <!-- ====================================================== --> 
+    <h5 id="section_5_10">5.10.   Demo - Continuous Integration with Maven</h5>
+    <a href="https://github.com/jenkins-docs/simple-java-maven-app" target="_blank">https://github.com/jenkins-docs/simple-java-maven-app</a>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image030.jpg" alt="Jenkins" style="width:100%" >
+    <p><br></p> 
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image031.jpg" alt="Jenkins" style="width:100%" >
+    <p><br></p>
+    <a href="https://github.com/bdstar/simple-java-maven-app" target="_blank">https://github.com/bdstar/simple-java-maven-app</a>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image032.jpg" alt="Jenkins" style="width:100%" >
+    <p><br></p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image033.jpg" alt="Jenkins" style="width:100%" >
+    <p><br></p> 
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image034.png" alt="Jenkins" style="width:100%" >
+    <p><br></p>  
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image035.jpg" alt="Jenkins" style="width:100%" >
+    <p><br></p> 
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image036.jpg" alt="Jenkins" style="width:100%" >
+    <p><br></p> 
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image037.jpg" alt="Jenkins" style="width:100%" >
+    <p><br></p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image038.jpg" alt="Jenkins" style="width:100%" >
+    <p><br></p>
+    <p>Now Click “Save”</p>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image039.jpg" alt="Jenkins" style="width:100%" >
+    <p><br></p> 
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image040.jpg" alt="Jenkins" style="width:100%" >
+    <p><br></p> 
+<pre class="code">
+/**************** START: PROJECT BUILD PART GOES HERE *****************/
+
+/*                                                                                                                     */
+
+/**************** END: PROJECT BUILD PART GOES HERE *****************/
+</pre>      
+    <p>This prove that, maven is successfully integrate with Jenkins.</p>
+    <p><br></p>                    
+    <!-- ====================================================== --> 
+    <h5 id="section_5_11">5.11.   Quick Recap</h5>
+    <ol>
+        <li>Jenkins</li>
+        <li>Continuous Integration (CI)</li>
+        <li>Continuous Delivery/Deployment (CD)</li>
+    </ol>
+    <img src="https://techntuts.com/html/devops/5_devops_jenkins_files/image041.jpg" alt="Jenkins" style="width:100%" >
+    <p><br></p> 
+    <!-- ====================================================== -->     
+
+</body>
+</html>

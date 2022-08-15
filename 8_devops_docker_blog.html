@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0 DevOps Tutorial</title>
+</head>
+<body>
+    <div style="background-color: #f0f0f0; padding: 5px 10px; border: 1px solid green; border-radius: 10px;">
+        <h6>DevOps Tutorial Outline:-</h6>
+        <ol>
+            <li><strong><a title="DevOps-1: Introduction to DevOps" href="../../../story/DevOps-Introduction-to-DevOps" target="_blank">DevOps-1: Introduction to DevOps</a></strong></li>
+            <li><strong><a title="DevOps-2:&nbsp;Learn about Linux" href="../../../story/DevOps-Learn-about-Linux" target="_blank">DevOps-2:&nbsp;Learn about Linux</a></strong></li>
+            <li><strong><a title="DevOps-3:&nbsp;Version Control System [Git]" href="../../../story/DevOps-Version-Control-System-Git" target="_blank">DevOps-3:&nbsp;Version Control System [Git]</a></strong></li>
+            <li><strong><a title="DevOps-4:&nbsp;Source Code Management (SCM) [Github]" href="../../../story/DevOps-Source-Code-Management-SCM-Github" target="_blank">DevOps-4:&nbsp;Source Code Management (SCM) [Github]</a></strong></li>
+            <li><strong><a title="DevOps-5:&nbsp;CI/CD [Jenkins]" href="../../../story/DevOps--CI-CD-Jenkins" target="_blank">DevOps-5:&nbsp;CI/CD [Jenkins]</a></strong></li>
+            <li><strong><a title="DevOps-6:&nbsp;Software and Automation Testing Framework [Selenium]" href="../../../story/DevOps-Software-and-Automation-Testing-Framework-Selenium" target="_blank">DevOps-6:&nbsp;Software and Automation Testing Framework [Selenium]</a></strong></li>
+            <li><strong><a title="DevOps-7:&nbsp;Configuration Management [Ansible]" href="../../../story/DevOps-Configuration-Management-Ansible" target="_blank">DevOps-7:&nbsp;Configuration Management [Ansible]</a></strong></li>
+            <li style="background-color: yellow;"><strong><a title="DevOps-8:&nbsp;Containerization [Docker]" href="../../../story/DevOps-Containerization-Docker" target="_blank">DevOps-8:&nbsp;Containerization [Docker]</a></strong></li>
+            <li><strong><a title="DevOps-9:&nbsp;Continuous Monitoring [Nagios]" href="../../../story/DevOps-Continuous-Monitoring-Nagios" target="_blank">DevOps-9:&nbsp;Continuous Monitoring [Nagios]</a></strong></li>
+            <li><strong><a title="DevOps-10:&nbsp;Continuous Orchestration [Kubernetes]" href="../../../story/DevOps-Continuous-Orchestration-Kubernetes" target="_blank">DevOps-10:&nbsp;Continuous Orchestration [Kubernetes]</a></strong></li>
+        </ol>
+    </div>
+
+    <hr style="border: 1px solid inset;">
+
+    <h6 style="margin-top: 20px;">DevOps-8:&nbsp;Containerization [Docker] - Outline</h6>
+    <ul style="list-style: none;">
+        <li><span>8.1:  </span> <strong><a href="#section_8_1">Learning Objectives</a></strong></li>
+        <li><span>8.2:  </span> <strong><a href="#section_8_2">Overview of Containerization</a></strong></li>
+        <li><span>8.3:  </span> <strong><a href="#section_8_3">Containerization vs. Virtualization</a></strong></li>
+        <li><span>8.4:  </span> <strong><a href="#section_8_4">Docker Overview</a></strong></li>
+        <li><span>8.5:  </span> <strong><a href="#section_8_5">Docker Components</a></strong></li>
+        <li><span>8.6:  </span> <strong><a href="#section_8_6">Docker Installation</a></strong></li>
+        <li><span>8.7:  </span> <strong><a href="#section_8_7">Docker Image and Containers</a></strong></li>
+        <li><span>8.8:  </span> <strong><a href="#section_8_8">Docker Networking</a></strong></li>
+        <li><span>8.9:  </span> <strong><a href="#section_8_9">Docker Registry and Docker Hub</a></strong></li> 
+        <li><span>8.10:  </span> <strong><a href="#section_8_10">Docker Compose Overview</a></strong></li> 
+        <li><span>8.11:  </span> <strong><a href="#section_8_11">Demo - Push a Docker Image on Docker Hub</a></strong></li> 
+        <li><span>8.12:  </span> <strong><a href="#section_8_12">Quick Recap</a></strong></li>                                
+    </ul>       
+
+    <hr style="border: 1px solid inset;">
+
+    <!-- ====================================================== -->  
+    <h5 id="section_8_1">8.1.   Learning Objectives</h5>
+    <p>Developer can use containerization technology to create and deploy apps more quickly and securely. Containerization allows developers to write code in one place that can be executed anywhere.</p>
+    <p><strong>Docker</strong> – is the most well-known containerization tool.</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image001.jpg" alt="Docker" style="width:60%" >
+    <p>Docker provides the following features:</p>
+    <ul>
+        <li>Docker Networking</li>
+        <li>Network driver</li>
+        <li>Docker Compose</li>
+        <li>Docker Registry</li>
+    </ul>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image002.jpg" alt="Docker" style="width:25%" >
+    <p><br></p>
+    <!-- ====================================================== -->  
+    <h5 id="section_8_2">8.2.   Overview of Containerization</h5>
+    <p>Containerization allows developers in your organization to construct and deploy apps faster and more securely. Container technology is extremely useful in today’s business world where applications must be platform-independent. Containerization plays a pivotal role in the deployment process,</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image003.jpg" alt="Docker" style="width:100%" >
+    <p><strong>Container:</strong> A Container is a piece of software that packages code and all of its dependencies.</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image004.jpg" alt="Docker" style="width:40%" >
+    <p>Containerization is the process of packaging software code along with all of its essential components.</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image005.jpg" alt="Docker" style="width:70%" >
+    <p>Benefits of Containerization:</p>
+    <ul>
+        <li><strong>Portability:</strong> A container separates application from their host operating system, making them portable.</li>
+        <li><strong>Scalability:</strong> A container application can withstand rising workloads by using a service-oriented application design.</li>
+        <li><strong>Faster Development:</strong> A container can create a master version of an image that can be distributed on demand, increasing app productivity.</li>
+        <li><strong>High Productivity:</strong> Container allow developers to track and make changes to the platform’s source code.</li>
+        <li><strong>Enhanced Security:</strong> Containerization increases security by adhering to an app separation mechanism.</li>
+        <li><strong>Continuity:</strong> Containerization ensures continuity because containers operate independently.</li>
+    </ul>
+    <p><br></p>
+    <!-- ====================================================== -->
+    <h5 id="section_8_3">8.3.   Containerization vs. Virtualization</h5>
+    <p>Virtualization allows you to run different operation systems on the same physical server’s hardware. </p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image006.jpg" alt="Docker" style="width:100%" >
+    <p>These are two most common methods for hosting application on a computer system.</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image007.jpg" alt="Docker" style="width:100%" >
+    <p><br></p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image008.jpg" alt="Docker" style="width:70%" >
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image009.jpg" alt="Docker" style="width:71%" >
+    <p><br></p>
+    <!-- ====================================================== -->
+    <h5 id="section_8_4">8.4.   Docker Overview</h5>
+    <p>Docker is a containerization platform for packaging your application along with all of its dependencies.</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image010.jpg" alt="Docker" style="width:100%" >
+    <p>Docker is a free and open platform for developing, deploying, and running software.</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image011.jpg" alt="Docker" style="width:100%" >
+    <p>Docker platform is a feature provided by Docker to manage the lifecycle of containers.</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image012.jpg" alt="Docker" style="width:100%" >
+    <p>User of the Docker platform:</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image013.jpg" alt="Docker" style="width:100%" >
+    <p>Whether your production environment is:</p>
+    <ul>
+        <li>Data Center</li>
+        <li>Cloud Provider</li>
+        <li>Hybrid Cloud</li>
+    </ul>
+    <p><strong>Advantages of Docker:</strong> Some of the benefits Docker delivers at various stages of the software development lifecycle (SDLC) are as below,</p>
+    <ul>
+        <li><strong>Build</strong></li>
+        <li><strong>Test</strong></li>
+        <li><strong>Deploy</strong></li>
+        <li><strong>Maintain</strong></li>        
+    </ul>
+    <p><strong>Features:</strong> Features provided by Docker:</p>
+    <ul>
+        <li>Scalable</li>
+        <li>Provides easy and faster configuration</li>
+        <li>Is able to reduce the size</li>
+        <li>Increases productivity</li>
+        <li>Reduces infrastructure and maintenance costs.</li>
+        <li>Application Isolation</li>
+        <li>Swarm</li>
+        <li>Routing mesh</li>
+        <li>Services</li>
+        <li>Security Management</li>
+    </ul>
+    <p><br></p>
+    <!-- ====================================================== -->    
+    <h6 id="section_8_5">8.5.   Docker Components</h6>
+    <p><strong>Docker Architecture:</strong>  Docker uses a client-server architecture.</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image014.jpg" alt="Docker" style="width:100%" >
+    <p>There are few key components of the Docker architecture,</p>
+    <ol>
+        <li> <strong>Docker Host:</strong> <br>
+            <img src="https://techntuts.com/html/devops/8_devops_docker_files/image015.jpg" alt="Docker" style="width:40%" > 
+        </li>
+        <li> <strong>Docker Client:</strong> <br>
+            <img src="https://techntuts.com/html/devops/8_devops_docker_files/image016.jpg" alt="Docker" style="width:40%" > 
+        </li>
+        <li><strong>Docker Registries:</strong><br>
+            <img src="https://techntuts.com/html/devops/8_devops_docker_files/image017.jpg" alt="Docker" style="width:30%" > 
+        </li>
+        <li><strong>Docker Object:</strong><br>
+            <img src="https://techntuts.com/html/devops/8_devops_docker_files/image018.jpg" alt="Docker" style="width:30%" > 
+        </li>
+    </ol>
+    <p><strong>Different types of Docker Objects:</strong></p>
+    <ol>
+        <li><strong>Image: </strong>Read-only template</li>
+        <li><strong>Container:</strong> Generate when you run an image</li>
+        <li><strong>Volume:</strong> Used to store persistent data</li>
+        <li><strong>Network: </strong>A way for all the isolated containers to communicate with one another. </li>
+    </ol>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image019.jpg" alt="Docker" style="width:100%" > 
+    <p><strong>Docker Engine:</strong> Docker engine is the core part of a Docker system. It is an application with a client-server architecture that is installed on the host machine.</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image020.jpg" alt="Docker" style="width:50%" > 
+    <p><br></p>
+    <!-- ====================================================== --> 
+    <h6 id="section_8_6">8.6.   Docker Installation</h6>
+    <p>System requirement to install Docker is:</p>
+    <ul>
+        <li>Disco 19.4</li>
+        <li>Cosmic 18.10</li>
+        <li>Bionic 18.04(LTS)</li>
+        <li>Xenial 16.04(LTS)</li>
+    </ul>
+    <p><br></p> 
+    <ol>
+        <li>
+            <p>Download package information from all configuration sources</p>
+<pre class="code">
+$ sudo apt-get update
+</pre>
+        </li>
+        <li>
+            <p>The following command install the packages that enable apt to use an HTTPS repository:</p>
+<pre class="code">
+$ sudo apt-get install \
+
+$ apt-transport-http \
+
+$ ca-certificates \
+
+$ curl \
+
+$ gnupg \
+
+$ isb-release
+</pre>
+        </li>
+        <li>
+            <p>Use the following curl command to add Docker’s official GPG key:</p>
+<pre class="code">
+$ curl-fsSL http://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpgz
+</pre>
+        </li>
+        <li>
+            <p>Set up a stable repository using the command,</p>
+<pre class="code">
+$ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] http://download.docker.com/linux/ubuntu \
+$(lsb_release -cs) stable” | sudo tee /etc/apt/sources.list.d/docker.list> /dev/null
+</pre>
+        </li>
+        <li>
+            <p>Download package information from all configuration sources</p>
+<pre class="code">
+$ sudo apt-get update
+</pre>
+        </li>
+        <li>
+            <p>This command installs the most recent version of Docker CE</p>
+<pre class="code">
+$ sudo apt-get install docker-ce
+</pre>
+        </li>
+        <li>
+            <p>To check the docker version,</p>
+<pre class="code">
+$ docker –version
+</pre>
+        </li>
+        <li>
+            <p>Verify the currently installed Docker engine by using the command below,</p>
+<pre class="code">
+$ sudo docker run hello-world
+</pre>
+        </li>
+    </ol>
+    <p><br></p>                
+    <!-- ====================================================== -->            
+    <h5 id="section_8_7">8.7.   Docker Image and Containers</h5>
+    <p>An image is a read-only template for building a Docker container.</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image021.jpg" alt="Docker" style="width:100%" > 
+    <p>Users can use a Docker file to create and use their image by following a simple syntax for defining the steps required.</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image022.jpg" alt="Docker" style="width:60%" > 
+    <p>Docker images are lightweight, tiny and fast</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image023.jpg" alt="Docker" style="width:60%" > 
+    <p><br></p>
+    <p>Types of Docker image:</p>
+    <ol>
+        <li><strong>Parent Image:</strong>
+            <ul>
+                <li> It is specified by the FROM directive in the image’s Docker-file</li>
+                <li>It serves as the foundation for all the docker commands</li>
+                <li> A Docker file’s FROM scratch directive creates a basic image without using any parent images.</li>
+            </ul>
+            <img src="https://techntuts.com/html/devops/8_devops_docker_files/image024.jpg" alt="Docker" style="width:100%" > 
+        </li>
+        <li><strong>Base Image:</strong>
+            <ul>
+                <li>It doesn’t have a parent image in its Docker-file</li>
+                <li>A FROM scratch directive is used in a Docker-file to create it.</li>
+            </ul>
+            <img src="https://techntuts.com/html/devops/8_devops_docker_files/image025.jpg" alt="Docker" style="width:100%" > 
+        </li>
+    </ol>
+    <p><br></p>
+    <p><strong>Some basic Docker image commands:</strong></p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image026.jpg" alt="Docker" style="width:100%" > 
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image027.jpg" alt="Docker" style="width:100%" > 
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image028.jpg" alt="Docker" style="width:100%" > 
+    <p><br></p>
+    <p><strong>Docker Container:</strong> A container is a runnable image instance. A container is isolated form other containers and its host machine. A user define container by its image and any configuration options provide while creating or starting it. It is a tool create, test and deploy an application.</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image029.jpg" alt="Docker" style="width:60%" > 
+    <p><br></p>
+    <p><strong>Docker API and CLI helps in:</strong></p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image030.jpg" alt="Docker" style="width:60%" > 
+    <p><br></p>
+    <p><strong>A user can:</strong></p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image031.jpg" alt="Docker" style="width:60%" > 
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image032.jpg" alt="Docker" style="width:60%" > 
+    <p><br></p>
+    <!-- ====================================================== -->     
+    <h5 id="section_8_8">8.8.   Docker Networking</h5>
+    <p>Networking allows Docker containers to communicate between Host and Client machine.</p>
+    <p>Docker’s networking subsystem is pluggable and driver-based. Default Network drivers provided by Docker are:</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image033.jpg" alt="Docker" style="width:60%" > 
+    <ol>
+        <li><strong>Bridge:</strong> It uses a software bridge to achieve connectivity and prevents containers from direct communication by implementing rules on the host machine.
+            <img src="https://techntuts.com/html/devops/8_devops_docker_files/image034.jpg" alt="Docker" style="width:60%" > 
+        </li>
+        <li><strong>Host:</strong> It is ideal to connect the containers which share the host’s networking namespace.
+            <img src="https://techntuts.com/html/devops/8_devops_docker_files/image035.jpg" alt="Docker" style="width:60%" > 
+        </li>
+        <li><strong>Overlay:</strong> It allow two standalone containers (including swarm service) on different Docker demons to connect.
+            <img src="https://techntuts.com/html/devops/8_devops_docker_files/image036.jpg" alt="Docker" style="width:100%" > 
+        </li>
+        <li><strong>Macvlan:</strong> It is ideal for legacy application or network traffic monitoring apps that demand to be connected directly to the physical network.
+            <img src="https://techntuts.com/html/devops/8_devops_docker_files/image037.jpg" alt="Docker" style="width:70%" > 
+        </li>
+        <li><strong>None:</strong> It is used to completely disable the networking stack on a container.
+            <img src="https://techntuts.com/html/devops/8_devops_docker_files/image038.jpg" alt="Docker" style="width:50%" > 
+        </li>
+    </ol>
+    <p><br></p>
+    <p><strong><u>Network Driver:</u></strong> Third-party network plugins can be used to integrate Docker with specialized network stacks.</p>
+    <ol>
+        <li><strong>Bridge:</strong> When multiple containers need to communicate on the same Docker host.</li>
+        <li><strong>Host:</strong> When the network stack should not be isolated form the Docker host, but other components of the container should be host network.</li>
+        <li><strong>Overlay:</strong> When containers running of different Docker hosts need to communicated, or when multiple apps require swarm service.</li>
+        <li><strong>Macvlan:</strong> When container is required to look like physical hosts on the network, each with its own MAC address.</li>
+    </ol>
+    <p><br></p>
+    <!-- ====================================================== -->     
+    <h5 id="section_8_9">8.9.   Docker Registry and Docker Hub</h5>
+    <p>It is a storage and distribution system for named Docker images. Docker users can pull images locally and push new images to the Registry.</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image039.jpg" alt="Docker" style="width:100%" > 
+    <p>The Docker Registry is compatible with Docker engine version 1.6.0 or higher. A user should use the Registry if they want to:</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image040.jpg" alt="Docker" style="width:700%" > 
+    <p><br></p>
+    <p><strong>Docker Hub:</strong> The world’s largest container image library and community. A user can utilize Docker Hub to search and share container images with their team. A user can browse over 100,000 container images from:</p>
+    <ul>
+        <li>Software manufactures/li>
+        <li>Open-Source Project</li>
+        <li>Community</li>
+    </ul>
+    <p><strong>Features of Docker Hub:</strong></p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image041.jpg" alt="Docker" style="width:100%" > 
+    <p><br></p>
+    <p><strong>Docker Hub allows you to:</strong></p>
+    <ul>
+        <li>Explore the world’s largest container image repository</li>
+        <li>Easy search over million container images</li>
+        <li>Share and store images in public or private repository</li>
+        <li>Access free public repository or select a subscription plan for private repository</li>
+        <li>Become a verified publisher</li>
+        <li>Run more technology in containers with certified infrastructure, container and plugins.</li>
+    </ul>
+    <p><br></p>
+    <!-- ====================================================== -->  
+    <h5 id="section_8_10">8.10.   Docker Compose Overview</h5>
+    <p>Docker compose is a tool that allows users to define and run multi-container Docker applications.</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image042.jpg" alt="Docker" style="width:50%" > 
+    <p>All the services in your configuration can eb created and started with single command.</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image043.jpg" alt="Docker" style="width:70%" > 
+    <p>Docker composer is compatible with the following environments:</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image044.jpg" alt="Docker" style="width:50%" > 
+    <p><br></p>
+    <p>Three-step process of using Compose:</p>
+    <ul>
+        <li>Create a Dockerfile</li>
+        <li>Define the service in docker-compose.yml</li>
+        <li>Run Docker compose up or docker-compose up command</li>
+    </ul>
+    <p><br></p>
+    <p>A sample docker-compose.yml file:</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image045.jpg" alt="Docker" style="width:100%" > 
+    <p><br></p>
+    <p><strong>Features of Docker Compose:</strong></p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image046.jpg" alt="Docker" style="width:100%" > 
+    <p><br></p>
+    <p><strong>Docker Compose use cases:</strong></p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image047.jpg" alt="Docker" style="width:100%" > 
+    <p><br></p>
+    <p><strong>Some fundamental Docker Compose Commands:</strong></p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image048.jpg" alt="Docker" style="width:100%" > 
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image049.jpg" alt="Docker" style="width:100%" > 
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image050.jpg" alt="Docker" style="width:100%" > 
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image051.jpg" alt="Docker" style="width:100%" > 
+    <p><br></p>
+    <!-- ====================================================== -->  
+    <h5 id="section_8_11">8.11.   Demo - Push a Docker Image on Docker Hub</h5>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image052.jpg" alt="Docker" style="width:100%" > 
+    <p><strong>app.py</strong> file is below,</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image053.jpg" alt="Docker" style="width:100%" > 
+    <p><br></p>    
+<pre class="code">
+~/pythonapp$ nano requirements.txt
+</pre>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image054.jpg" alt="Docker" style="width:100%" > 
+<pre class="code">
+~/pythonapp$ nano Dockerfile
+</pre>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image055.jpg" alt="Docker" style="width:100%" > 
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image056.jpg" alt="Docker" style="width:100%" > 
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image057.jpg" alt="Docker" style="width:100%" > 
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image058.jpg" alt="Docker" style="width:100%" > 
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image059.jpg" alt="Docker" style="width:100%" > 
+    <p><br></p>
+    <p><strong>Go to </strong> <a href="http://hub.docker.com" target="_blank">http://hub.docker.com</a> </p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image060.jpg" alt="Docker" style="width:100%" > 
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image061.jpg" alt="Docker" style="width:100%" > 
+    <p><br></p>
+    <p><strong>Login to your</strong> <a href="http://hub.docker.com" target="_blank">http://hub.docker.com</a> </p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image062.jpg" alt="Docker" style="width:100%" > 
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image063.jpg" alt="Docker" style="width:100%" > 
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image064.jpg" alt="Docker" style="width:100%" > 
+    <p>Those we have successfully pushed an image to Docker Hub.</p>
+    <p><br></p>
+    <!-- ====================================================== -->  
+    <h5 id="section_8_12">8.12.   Quick Recap</h5>
+    <p>Containerization is a method for developers to build and deploy applications more rapidly and securely, ensuring bug-free portability of the application. The developer team containerizes the legacy application.</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image065.jpg" alt="Docker" style="width:100%" > 
+    <p>Docker image will help the developers in creating a new application with a slight configuration change. Macvlan network driver can be used to connect the application directly to the physical network.</p>
+    <img src="https://techntuts.com/html/devops/8_devops_docker_files/image066.jpg" alt="Docker" style="width:100%" > 
+    <p><br></p>
+    <!-- ====================================================== -->            
+</body>
+</html>

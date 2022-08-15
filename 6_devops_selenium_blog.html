@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0 DevOps Tutorial</title>
+</head>
+<body>
+    <div style="background-color: #f0f0f0; padding: 5px 10px; border: 1px solid green; border-radius: 10px;">
+        <h6>DevOps Tutorial Outline:-</h6>
+        <ol>
+            <li><strong><a title="DevOps-1: Introduction to DevOps" href="../../../story/DevOps-Introduction-to-DevOps" target="_blank">DevOps-1: Introduction to DevOps</a></strong></li>
+            <li><strong><a title="DevOps-2:&nbsp;Learn about Linux" href="../../../story/DevOps-Learn-about-Linux" target="_blank">DevOps-2:&nbsp;Learn about Linux</a></strong></li>
+            <li><strong><a title="DevOps-3:&nbsp;Version Control System [Git]" href="../../../story/DevOps-Version-Control-System-Git" target="_blank">DevOps-3:&nbsp;Version Control System [Git]</a></strong></li>
+            <li><strong><a title="DevOps-4:&nbsp;Source Code Management (SCM) [Github]" href="../../../story/DevOps-Source-Code-Management-SCM-Github" target="_blank">DevOps-4:&nbsp;Source Code Management (SCM) [Github]</a></strong></li>
+            <li><strong><a title="DevOps-5:&nbsp;CI/CD [Jenkins]" href="../../../story/DevOps--CI-CD-Jenkins" target="_blank">DevOps-5:&nbsp;CI/CD [Jenkins]</a></strong></li>
+            <li style="background-color: yellow;"><strong><a title="DevOps-6:&nbsp;Software and Automation Testing Framework [Selenium]" href="../../../story/DevOps-Software-and-Automation-Testing-Framework-Selenium" target="_blank">DevOps-6:&nbsp;Software and Automation Testing Framework [Selenium]</a></strong></li>
+            <li><strong><a title="DevOps-7:&nbsp;Configuration Management [Ansible]" href="../../../story/DevOps-Configuration-Management-Ansible" target="_blank">DevOps-7:&nbsp;Configuration Management [Ansible]</a></strong></li>
+            <li><strong><a title="DevOps-8:&nbsp;Containerization [Docker]" href="../../../story/DevOps-Containerization-Docker" target="_blank">DevOps-8:&nbsp;Containerization [Docker]</a></strong></li>
+            <li><strong><a title="DevOps-9:&nbsp;Continuous Monitoring [Nagios]" href="../../../story/DevOps-Continuous-Monitoring-Nagios" target="_blank">DevOps-9:&nbsp;Continuous Monitoring [Nagios]</a></strong></li>
+            <li><strong><a title="DevOps-10:&nbsp;Continuous Orchestration [Kubernetes]" href="../../../story/DevOps-Continuous-Orchestration-Kubernetes" target="_blank">DevOps-10:&nbsp;Continuous Orchestration [Kubernetes]</a></strong></li>
+        </ol>
+    </div>
+
+    <hr style="border: 1px solid inset;">
+
+    <h6 style="margin-top: 20px;">DevOps-6:&nbsp;Software and Automation Testing Framework [Selenium] - Outline</h6>
+    <ul style="list-style: none;">
+        <li><span>6.1:  </span> <strong><a href="#section_6_1">Learning Objectives</a></strong></li>
+        <li><span>6.2:  </span> <strong><a href="#section_6_2">Overview of Automation Testing</a></strong></li>
+        <li><span>6.3:  </span> <strong><a href="#section_6_3">Automation Testing Process and its Popular Tools</a></strong></li>
+        <li><span>6.4:  </span> <strong><a href="#section_6_4">Introduction to Selenium</a></strong></li>
+        <li><span>6.5:  </span> <strong><a href="#section_6_5">Selenium WebDriver Architecture</a></strong></li>
+        <li><span>6.6:  </span> <strong><a href="#section_6_6">Installation</a></strong></li>
+        <li><span>6.7:  </span> <strong><a href="#section_6_7">Demo - Automate Search Run First Test Case Using Selenium</a></strong></li>
+        <li><span>6.8:  </span> <strong><a href="#section_6_8">Overview of Selenium Test Framework (TestNG)</a></strong></li>
+        <li><span>6.9:  </span> <strong><a href="#section_6_9">Selenium with Jenkins Integration</a></strong></li>                
+    </ul>
+     
+
+    <hr style="border: 1px solid inset;">
+
+    <!-- ====================================================== -->  
+    <h5 id="section_6_1">6.1.   Learning Objectives</h5>
+    <p>Selenium provides a set of tools and libraries that enable and support web browser automation testing. TestNG or Jenkins to generate proper test report.</p>
+    <p><br></p>
+    <!-- ====================================================== -->  
+    <h5 id="section_6_2">6.2.   Overview of Automation Testing</h5>
+    <p><strong>What is automation testing?</strong></p>
+    <p>Automation testing is an application software testing process using software tools to control the execution of tests. The actual test results are compared with the expected test results. Manual testing is a form of software testing in which test cases are run by a human rather than using an automated tool.</p>
+    <p>The automated software testing can be summed up a follow,</p>
+    <ul>
+        <li>Accelerates the execution of tests</li>
+        <li>Helps to increase the test coverage.</li>
+        <li>Eliminates the need for human interference.</li>
+    </ul>
+    <p><strong>Why to we need automation tool?</strong></p>
+    <p>Manually repeating these tests is costly and time consuming. Once created, automated tests can be run over and over again at no additional cost and they are much faster than manual tests. Automated software testing can reduce the time to run repetitive tests from days to hours.</p>
+    <p>The criteria for the test cases are as follows:</p>
+    <ul>
+        <li>High risk and business critical</li>
+        <li>Repetitive execution</li>
+        <li>Monotonous or exhausting to perform manually</li>
+        <li>Laborious</li>
+    </ul>
+    <p>It is also important to note that Automation is not appropriate to use in the test cases:</p>
+    <ul>
+        <li>That are newly designed and have never been manually executed at least once.</li>
+        <li>Test cases requirements changes frequently></li>
+        <li>That are executed in ad-hoc situations</li>
+    </ul>
+    <p><br></p>
+    <!-- ====================================================== -->
+    <h5 id="section_6_3">6.3.   Automation Testing Process and its Popular Tools</h5>
+    <p>Automation testing process,</p>
+    <img src="https://techntuts.com/html/devops/6_devops_selenium_files/image001.jpg" alt="Automation Testing Process" style="width:100%" >
+    <ol>
+    <li>
+    <p><strong>Scope of automation:</strong> The specific area of your application software that will be automated.</p>
+    <p>Guidelines to assess scope:</p>
+    <ul>
+        <li>Empirical features that are essential for application software</li>
+        <li>Larger Data involvement scenarios of the application software</li>
+        <li>Identical functionalities shared by the application software products</li>
+        <li>Technical feasibility of the application software.</li>
+    </ul>
+    </li><li>
+    <p><strong>Test automation tool selection:</strong> The project’s specifications are evaluated using the scope of automation to select appropriate tools.</p>
+    <img src="https://techntuts.com/html/devops/6_devops_selenium_files/image002.jpg" alt="Automation Testing Process" style="width:100%" >
+    </li><li>
+    <p><strong>Test planning, Design and Development:</strong>Cycle of test planning, design and development,</p>
+    <ul>
+        <li>Selection of Automation tool as per requirements</li>
+        <li>Framework designs and their characteristics</li>
+        <li>Automation components that are in and out-of-scope</li>
+        <li>Preparation of an automation testbed</li>
+        <li>Schedules and timeline of scripting and execution</li>
+    </ul>
+    </li><li>
+    <p><strong>Test Execution: </strong>The automation script requires input test data. Therefore, it generates extensive test reports after execution. </p>
+    </li><li>
+    <p><strong>Test Automation Management:</strong> A phase of automation testing that is used to see if the new features added to the software are working properly.</p>
+    <p>Popular software and automation testing tools,</p>
+    <ul>
+        <li><strong>Ranorex Studio:</strong> It is a one-stop solution for automation functional user interface test, regression tests, data-driven tests and more.</li>
+        <li><strong>Testim:</strong> It is the quickest way to create durable end-to-end tests, whether they’re codeless, programmed or both.</li>
+        <li><strong>Lambdatest:</strong> It is popular tool for performing automated cross-browser testing.</li>
+        <li><strong>Selenium:</strong> It is a software testing tool that’s use to perform regression testing.</li>
+    </ul>
+    </li>
+    </ol>
+    <p><br></p>
+    <!-- ====================================================== -->
+    <h5 id="section_6_4">6.4.   Introduction to Selenium</h5>
+    <p>Selenium is an umbrella project that includes a set of tools and libraries that enable and support web browser automation. Feature of Selenium,</p>
+    <ul>
+        <li>It is an open-source and portable framework used to automate web application testing</li>
+        <li>Helps is crating robust, browser-based regression automation suites and perform test execution.</li>
+        <li> It is highly flexible when it comes to testing functional and regression test cases</li>
+        <li>Support cross browning, where the test cases run across various platform simultaneously</li>
+    </ul>
+    <p>Selenium is compatible with:</p>
+    <img src="https://techntuts.com/html/devops/6_devops_selenium_files/image003.jpg" alt="Automation Testing Process" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/6_devops_selenium_files/image004.jpg" alt="Automation Testing Process" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/6_devops_selenium_files/image005.jpg" alt="Automation Testing Process" style="width:100%" >
+    <img src="https://techntuts.com/html/devops/6_devops_selenium_files/image006.jpg" alt="Automation Testing Process" style="width:100%" >
+    <p><br></p>
+    <!-- ====================================================== -->    
+    <h6 id="section_6_5">6.5.   Selenium WebDriver Architecture</h6>
+    <p>Selenium WebDriver is the most significate component of the Selenium Tool suit. Test script can be written in any of the supported programming language and run directly in most contemporary web browser using WebDriver.</p>
+    <img src="https://techntuts.com/html/devops/6_devops_selenium_files/image007.jpg" alt="Automation Testing Process" style="width:100%" >
+    <p>The architectural layout of Selenium WebDriver which is categorized into 4 main components,</p>
+    <img src="https://techntuts.com/html/devops/6_devops_selenium_files/image008.jpg" alt="Automation Testing Process" style="width:100%" >
+    <p><strong>Selenium Language Bindings:</strong> It has language binding or selenium Client Libraries to support multiple language.  For instance, when we want to access the browser driver in Java by using the java bindings.</p>
+    <p><strong>JSON Wire Protocol:</strong> JSON is a web-based data exchange standard. This manages data structures, such as object and array. Writing and reading data from JSON is simple. It communicates between a server and a client.</p>
+    <p><strong>Browser Driver:</strong> It uses distinctive drivers for every browser to establish a safe connection with the browser. It doesn’t compromise with the internal logic of the browser’s functionalities.</p>
+    <p><strong>Real Browser:</strong> Compatible with the major browsers:
+    <ul>
+        <li>Internet Explorer</li>
+        <li>Mozilla Firefox</li>
+        <li>Google Chrome</li>
+        <li>Safari</li>
+    </ul>
+    </p>
+    <p><br></p>
+    <!-- ====================================================== --> 
+    <h6 id="section_6_6">6.6.   Installation</h6>
+    <p><strong>Prerequisites:-</strong></p>
+    <ul>
+        <li>64-bit Ubuntu OS</li>
+        <li>JDK 8(Java as Programming Language)</li>
+    </ul>
+    <p><strong>Selenium Installation:-</strong></p>
+    <ul>
+        <li>Download and set up selenium server</li>
+        <li>Download ChormeDriver</li>
+        <li>Integrate Selenium to Eclipse</li>
+    </ul>
+    <p>Download and Set-up Selenium Server</p>
+    <p>The sub-steps involved in the downloading and setting up of the Selenium Server</p>
+    <ol>
+        <li>
+            <strong>Locate Selenium using the command:</strong>
+<pre class="code">
+$ locate selenium
+</pre>
+        </li>
+        <li>
+            <strong> If locate is not found then command:</strong>
+<pre class="code">
+$ sudo apt install mlocate
+</pre>
+        <img src="https://techntuts.com/html/devops/6_devops_selenium_files/image009.jpg" alt="Automation Testing Process" style="width:100%" >
+        </li>
+        <li>
+            <strong>Update the package: </strong>
+<pre class="code">
+$ sudo apt-get update
+</pre>            
+        </li>
+        <li>
+            <strong>Install Selenium using the command:</strong>
+<pre class="code">
+$ sudo pip install selenium
+</pre>
+        </li>
+        <li>
+            <strong>Download Selenium Server (Grid)</strong>
+            <a href="https://www.selenium.dev/downloads/" target="_blank">https://www.selenium.dev/downloads/</a>
+        </li>
+        <li>
+            <strong>Download Chrome Driver</strong>
+            <a href="https://chromedriver.chromium.org/downloads" target="_blank">https://chromedriver.chromium.org/downloads</a>
+        </li>
+        <li>Unzip chromedriver download file</li>
+        <li>Open the Eclipse and create a new java project in it
+            <img src="https://techntuts.com/html/devops/6_devops_selenium_files/image010.jpg" alt="Automation Testing Process" style="width:100%" >
+        </li>
+        <li>
+            <strong>Configure the build path by right clicking on the created project</strong>
+            <img src="https://techntuts.com/html/devops/6_devops_selenium_files/image011.jpg" alt="Automation Testing Process" style="width:100%" >
+        </li>
+        <li>
+            <strong>Add external jar file by adding the Selenium jar file</strong>
+            <img src="https://techntuts.com/html/devops/6_devops_selenium_files/image012.jpg" alt="Automation Testing Process" style="width:100%" >
+        </li>
+        <li>
+            <strong>This finishes the integration of Selenium with Eclipse</strong>
+            <img src="https://techntuts.com/html/devops/6_devops_selenium_files/image013.jpg" alt="Automation Testing Process" style="width:100%" >
+        </li>
+    </ol>
+    <p><br></p>                
+    <!-- ====================================================== -->            
+    <h5 id="section_6_7">6.7.   Demo - Automate Search Run First Test Case Using Selenium</h5>
+    <p><br></p>
+    <!-- ====================================================== -->     
+    <h5 id="section_6_8">6.8.   Overview of Selenium Test Framework (TestNG)</h5>
+    <p>Selenium tests do not deliver test result in a consistent format, so TestNG is used to generate test results.</p>
+    <img src="https://techntuts.com/html/devops/6_devops_selenium_files/image014.jpg" alt="Automation Testing Process" >
+    <p>jUnit, which employs annotations @, is the inspiration for TestNG. TestNG fixes Junit’s shortcoming and intends to make end-to-end testing simple.</p>
+    <img src="https://techntuts.com/html/devops/6_devops_selenium_files/image015.jpg" alt="Automation Testing Process" style="width:100%" >
+    <p>The <b>invocation count</b> keyword is used to perform the test case innumerable times without loops.</p>
+    <p>Cross-browser testing uses TestNG to run multiple test cases on browsers. The annotations in the testing are very lucid. For instance, @BeforeMethod, @AfterMethod, @BeforeTest and @AfterTest</p>
+    <p>TestNG provides the followings,</p>
+    <ul>
+        <li>Provides a readable report due to lack of report generation in WebDriver</li>
+        <li>Makes test coding easier by utilizing TestNG</li>
+        <li>Automates uncaught exception without halting the test unexpectedly.</li>
+    </ul>
+    <p><br></p>
+    <!-- ====================================================== -->     
+    <h5 id="section_6_9">6.9.   Selenium with Jenkins Integration</h5>
+    <p>Jenkins is an open-source automation server and a popular Continuous integration orchestration tool. It has the following features,</p>
+    <ul>
+        <li>Promotes continuous integration and delivery by automation</li>
+        <li>Provides numerous plugins for integration with multiple framework</li>
+        <li>Provides plugin that help run test suites, gather and display the result.</li>
+    </ul>
+    <p>The benefits of using Jenkins for automation testing are:</p>
+    <ol>
+        <li><strong>Runs Automated Test Suits:</strong>
+            <ul>
+                <li>Provides plugins for various test frameworks like Selenium, Cucumber, and Appium Robot framework</li>
+                <li>Integrated into Continuous integration pipelines to run automated test for every build</li>
+            </ul>
+        </li>
+        <li><strong>Summarizes the Result:</strong>
+            <ul>
+                <li>Most plugins also summarize the test results are display them as HTML output.</li>
+            </ul>
+        </li>
+        <li><strong>Provides Trend:</strong>
+            <ul>
+                <li>It keeps track of result and display them as a trend graph</li>
+                <li>his offers a better view of how the test have fared in the past.</li>
+            </ul>        
+        </li>
+        <li><strong>Display Test Failure Result:</strong>
+            <ul>
+                <li>Test result are tabulated, and the failures are logged with the test result.</li>
+            </ul> 
+        </li>
+    </ol>
+    <p><br></p>
+    <!-- ====================================================== -->    
+
+</body>
+</html>

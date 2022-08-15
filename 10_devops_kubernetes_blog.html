@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0 DevOps Tutorial</title>
+</head>
+<body>
+    <div style="background-color: #f0f0f0; padding: 5px 10px; border: 1px solid green; border-radius: 10px;">
+        <h6>DevOps Tutorial Outline:-</h6>
+        <ol>
+            <li><strong><a title="DevOps-1: Introduction to DevOps" href="../../../story/DevOps-Introduction-to-DevOps" target="_blank">DevOps-1: Introduction to DevOps</a></strong></li>
+            <li><strong><a title="DevOps-2:&nbsp;Learn about Linux" href="../../../story/DevOps-Learn-about-Linux" target="_blank">DevOps-2:&nbsp;Learn about Linux</a></strong></li>
+            <li><strong><a title="DevOps-3:&nbsp;Version Control System [Git]" href="../../../story/DevOps-Version-Control-System-Git" target="_blank">DevOps-3:&nbsp;Version Control System [Git]</a></strong></li>
+            <li><strong><a title="DevOps-4:&nbsp;Source Code Management (SCM) [Github]" href="../../../story/DevOps-Source-Code-Management-SCM-Github" target="_blank">DevOps-4:&nbsp;Source Code Management (SCM) [Github]</a></strong></li>
+            <li><strong><a title="DevOps-5:&nbsp;CI/CD [Jenkins]" href="../../../story/DevOps--CI-CD-Jenkins" target="_blank">DevOps-5:&nbsp;CI/CD [Jenkins]</a></strong></li>
+            <li><strong><a title="DevOps-6:&nbsp;Software and Automation Testing Framework [Selenium]" href="../../../story/DevOps-Software-and-Automation-Testing-Framework-Selenium" target="_blank">DevOps-6:&nbsp;Software and Automation Testing Framework [Selenium]</a></strong></li>
+            <li><strong><a title="DevOps-7:&nbsp;Configuration Management [Ansible]" href="../../../story/DevOps-Configuration-Management-Ansible" target="_blank">DevOps-7:&nbsp;Configuration Management [Ansible]</a></strong></li>
+            <li><strong><a title="DevOps-8:&nbsp;Containerization [Docker]" href="../../../story/DevOps-Containerization-Docker" target="_blank">DevOps-8:&nbsp;Containerization [Docker]</a></strong></li>
+            <li><strong><a title="DevOps-9:&nbsp;Continuous Monitoring [Nagios]" href="../../../story/DevOps-Continuous-Monitoring-Nagios" target="_blank">DevOps-9:&nbsp;Continuous Monitoring [Nagios]</a></strong></li>
+            <li style="background-color: yellow;"><strong><a title="DevOps-10:&nbsp;Continuous Orchestration [Kubernetes]" href="../../../story/DevOps-Continuous-Orchestration-Kubernetes" target="_blank">DevOps-10:&nbsp;Continuous Orchestration [Kubernetes]</a></strong></li>
+        </ol>
+    </div>
+
+    <hr style="border: 1px solid inset;">
+
+    <h6 style="margin-top: 20px;">DevOps-10:&nbsp;Continuous Orchestration [Kubernetes] - Outline</h6>
+    <ul style="list-style: none;">
+        <li><span>10.1:  </span> <strong><a href="#section_10_1">Learning Objectives</a></strong></li>
+        <li><span>10.2:  </span> <strong><a href="#section_10_2">Container Orchestration</a></strong></li>
+        <li><span>10.3:  </span> <strong><a href="#section_10_3">Kubernetes Overview</a></strong></li>
+        <li><span>10.4:  </span> <strong><a href="#section_10_4">Kubernetes Components</a></strong></li>
+        <li><span>10.5:  </span> <strong><a href="#section_10_5">Kubernetes Architecture</a></strong></li>
+        <li><span>10.6:  </span> <strong><a href="#section_10_6">Kubernetes Installation</a></strong></li>
+        <li><span>10.7:  </span> <strong><a href="#section_10_7">Kubernetes Basics - Part One</a></strong></li>
+        <li><span>10.8:  </span> <strong><a href="#section_10_8">Kubernetes Basics - Part Two</a></strong></li>
+        <li><span>10.9:  </span> <strong><a href="#section_10_9">Kubernetes Networking and Storage</a></strong></li> 
+        <li><span>10.10:  </span> <strong><a href="#section_10_10">Kubernetes Configuration</a></strong></li>
+        <li><span>10.11:  </span> <strong><a href="#section_10_11">Interacting with a Kubernetes Cluster</a></strong></li>  
+        <li><span>10.12:  </span> <strong><a href="#section_10_12">Demo - Exploring a Kube Cluster</a></strong></li>  
+        <li><span>10.13:  </span> <strong><a href="#section_10_13">Practice Project</a></strong></li>                                
+    </ul>
+   
+    <hr style="border: 1px solid inset;">
+
+    <!-- ====================================================== -->  
+    <h5 id="section_10_1">10.1.   Learning Objectives</h5>
+    <p><br></p>
+    <!-- ====================================================== -->  
+    <h5 id="section_10_2">10.2.   Container Orchestration</h5>
+    <p>Container Orchestration automates the deployment, management, scaling and networking of containers. It is useful for the enterprises to deploy and manage multiple containers and hosts.</p>
+    <p><strong>Purposes of using Container Orchestration:</strong></p>
+    <ul>
+        <li>A container orchestrator automatically deploys and manages containerized apps.</li>
+        <li>It responds dynamically to changes in the environment.</li>
+        <li>It ensures all deployed container instances get updated if a new version of a service is released.
+            <ul>
+                <li>Dynamically respond to changes</li>
+                <li>Deploy the same application across different environments.</li>
+            </ul>
+        </li>
+    </ul>
+    <p>Container Orchestration is essential to automate and manage tasks such as:</p>
+    <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image001.jpg" alt="Continuous Orchestration" style="width:100%" >
+    <p><br></p>
+    <p><strong>How does container Orchestration Work?</strong></p>
+    <p>The configuration of an application is described using either a YAML or JSON file. The file specifies where to find the container images, how to establish a network, and where to store logs. While deploying a new container, the orchestration tool automatically schedules the deployment to a cluster. Container Orchestration then manages the container’s life cycle based on the specifications in the config files.</p>
+    <p><strong>Container Orchestration Tools:</strong></p>
+    <p>Container orchestration tools provide a framework for managing containers and microservices architecture at scale. They simplify container management, and provide a framework for managing multiple containers as one entity. Some popular tools used for container lifecycle management are:</p>
+    <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image002.jpg" alt="Continuous Orchestration" style="width:100%" > 
+    <p><br></p>
+    <!-- ====================================================== -->
+    <h5 id="section_10_3">10.3.   Kubernetes Overview</h5>
+    <p>Kubernetes is a powerful open-source orchestration platform designed to manage containerized applications. It aims to provide better ways of managing related distributed components and services across varied infrastructure. It is also known as k8s or “kube”. Kubernetes was originally developed by Google and then acquired by Cloud Native Computing Foundation (CNCF). It acts as a cloud service in major cloud providers such as EKS in AWS and Kubernetes Engine in GCP.</p>
+    <p><strong>Features of Kubernetes:</strong></p>
+    <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image003.jpg" alt="Continuous Orchestration" style="width:100%" > 
+    <p><strong>Benefits of Kubernetes:</strong></p>
+    <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image004.jpg" alt="Continuous Orchestration" style="width:100%" > 
+    <p><br></p>
+    <!-- ====================================================== -->
+    <h5 id="section_10_4">10.4.   Kubernetes Components</h5>
+    <p><strong>Components of Kubernetes Cluster:</strong></p>
+    <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image005.jpg" alt="Continuous Orchestration" style="width:100%" > 
+    <p><strong>Control Plane Components:</strong> The control plan’s components make global decisions about the cluster.</p>
+    <ul>
+        <li><strong>Kube-apiserver:</strong> It is designed to scale horizontally by deploying more instances. You can run several instances of kube-apiserver and balance traffic between those instances.</li>
+        <li><strong>Kube scheduler:</strong> It watches for newly created Pods with no assigned node and selects a node for them to run on.</li>
+        <li><strong>Kube-controller-manager:</strong> It runs controller processes. Each controller is a separate process, but to reduce complexity.</li>
+        <li><strong>Etcd:</strong> It is a consistent and highly-available key value store used as Kubernetes backing store for all cluster data.</li>
+    </ul>
+    <p><strong>Cloud-controller-manager:</strong> It helps when you want to run Kubernetes with a specific cloud provider.</p>
+    <ul>
+        <li>It incorporates cloud-specific control logic.</li>
+        <li>It only runs the controllers that are specific to your cloud provider. </li>
+    </ul>
+    <p><strong>Nodes:</strong> A Kubernetes cluster needs at least one compute node, but we’ll normally have many. Pods are scheduled and orchestrated to run on.</p>
+    <ul>
+        <li><strong>Kubelet:</strong> It is an agent that makes sure the containers are running in a Pod.</li>
+        <li><strong>Kube-proxy:</strong> It implements a network proxy and acts as a load balancer in a Kubernetes cluster. It also helps in redirecting traffic to a specific container in a pod, based on the incoming port and IP detais.</li>
+        <li><strong>Container runtime:</strong> The container runtime run containers on a Kubernetes cluster. It is responsible for fetching, starting, and stopping container images.  </li>
+        <li><strong>Pod:</strong> A pod is the smallest and simplest unit in the Kubernetes object model. It represents a single instance of an application. It is the components of the application workload that runs on the worker node.</li>
+    </ul>
+    <p><br></p>
+    <!-- ====================================================== -->    
+    <h6 id="section_10_5">10.5.   Kubernetes Architecture</h6>
+    <p>Kubernetes brings together individual physical or virtual machines into a cluster using a shared network to communicate between each server. This cluster is the physical platform where all Kubernetes components, capabilities, and workloads are configured.</p>
+    <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image006.jpg" alt="Continuous Orchestration" style="width:100%" > 
+    <p>Kubernetes Architecture consists of control plane, nodes, and pods.</p>
+    <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image007.jpg" alt="Continuous Orchestration" style="width:100%" > 
+    <p><strong>Control plane:</strong> The control plane is the system that maintains a record of all Kubernetes objects. It continuously manages object states responding to changes in the cluster. It also works to make the actual state of system objects match the desired state. All the components of the control plane can run on a single master node or it can be replicated across multiple master nodes for high availability  </p>
+    <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image008.jpg" alt="Continuous Orchestration" style="width:100%" > 
+    <p><strong>Control plane:</strong> Cluster nodes are machines that run containers and are managed by the master nodes. The kubelet is the primary and most important controller in Kubernetes that responsible for driving the container execution layer, typically docker.</p>
+    <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image009.jpg" alt="Continuous Orchestration" style="width:60%" > 
+    <p><strong>Pods:</strong> It is one of the crucial concepts in Kubernetes, as they are the key construct that developers interact with. It packages up a single application, which can consist of multiple containers and storage volumes.</p>
+    <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image010.jpg" alt="Continuous Orchestration" style="width:60%" > 
+    <p><br></p>
+    <!-- ====================================================== --> 
+    <h6 id="section_10_6">10.6.   Kubernetes Installation</h6>
+    <p>Before install Kubernetes, you must be installed <strong>Docker.</strong></p>
+    <p>Steps to install Kubernetes:</p>
+    <ol>
+        <li><strong>Add the key and download it.</strong>
+            <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image011.jpg" alt="Continuous Orchestration" style="width:100%" > 
+        </li>
+        <li><strong>Update the apt-get package</strong>
+            <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image012.jpg" alt="Continuous Orchestration" style="width:100%" > 
+        </li>
+        <li><strong>Install the Kubernetes and the tools required to manage it.</strong>
+            <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image013.jpg" alt="Continuous Orchestration" style="width:100%" > 
+        </li>
+    </ol>
+    <p><br></p>                
+    <!-- ====================================================== -->            
+    <h5 id="section_10_7">10.7.   Kubernetes Basics - Part One</h5>
+    <p>The basic component of Kubernetes are:</p>
+    <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image014.jpg" alt="Continuous Orchestration" style="width:70%" > 
+    <ol>
+        <li><strong>Pods:</strong> The Pod is a collection of one or more containers with shared storage and network resources and a specification to run its containers. It is the smallest unit of Kubernetes application.
+            <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image015.jpg" alt="Continuous Orchestration" style="width:100%" > 
+            <p><strong>Features of Pods:</strong></p>
+            <ul>
+                <li>Pod containers can contain multiple apps.</li>
+                <li>Pod templates define the process of creating and deploying pods.</li>
+                <li>Pods share the physical resources of the host machine.</li>
+            </ul>
+            <p><strong>How Pods can be used?</strong></p>
+            <p>There are two ways of using pods in a Kubernetes cluster.</p>
+            <ul>
+                <li>Pods running on a single container</li>
+                <li>Pods running on multiple container</li>
+            </ul>
+            <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image016.jpg" alt="Continuous Orchestration" style="width:100%" > 
+        </li>
+        <li><strong>Labels:</strong> Labels are the key value pairs that Kubernetes attaches to various object. These are used to organize and select subsets of objects.
+            <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image017.jpg" alt="Continuous Orchestration" style="width:100%" > 
+            <p><strong>Example of Labels:</strong></p>
+<pre class="code">
+“release” : “stable”
+“tier” : “frontend”
+“track” : “daily”
+“partition” : “customer A”
+</pre>
+        </li>
+        <li><strong>Selectors:</strong> The selector are the core grouping primitives. These are used to select a group of objects.
+            <p><strong>Types of Selector:</strong> The Kubernetes API currently supports two types of selectors,</p>
+            <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image018.jpg" alt="Continuous Orchestration" style="width:100%" > 
+            <ul>
+                <li><strong>Equality-based selector:</strong> It use label keys and values to allow filtering.
+                    <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image019.jpg" alt="Continuous Orchestration" style="width:70%" > 
+                </li>
+                <li><strong>Set based selector:</strong> It allow filtering keys according to a set of values.
+                    <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image020.jpg" alt="Continuous Orchestration" style="width:70%" > 
+                </li>
+            </ul>
+        </li>
+    </ol>
+    <p><br></p>
+    <!-- ====================================================== -->     
+    <h5 id="section_10_8">10.8.   Kubernetes Basics - Part Two</h5>
+    <p><strong>The components of Kubernetes are,</strong></p>
+    <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image021.jpg" alt="Continuous Orchestration" style="width:70%" > 
+    <ol>
+        <li><strong>Controllers:</strong> Controllers are control loops that monitor the state of your Kubernetes cluster and make a request changes wherever needed.
+            <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image022.jpg" alt="Continuous Orchestration" style="width:100%" > 
+            <p><strong>Features of controller:</strong></p>
+            <ul>
+                <li>Controllers track at least one Kubernetes resource type.</li>
+                <li>Controllers are responsible for making the current state come closer to those desired states.</li>
+                <li>Controllers take care of the availability of the pod.</li>
+                <li>Controllers manage pods using labels and selectors.</li>
+            </ul>
+            <p><strong>Types of Controllers:</strong></p>
+            <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image023.jpg" alt="Continuous Orchestration" style="width:100%" > 
+        </li>
+        <li><strong>Replica Set:</strong> A Replica Set ensures that a set of replica pods is running at any given time.
+            <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image024.jpg" alt="Continuous Orchestration" style="width:100%" > 
+            <p><strong>Required for Replica Set:</strong></p>
+            <ul>
+                <li>The Replica Set uses the selector to identify the pods running.</li>
+                <li>It acquires the pod if the pod doesn’t have an owner reference.</li>
+            </ul>
+            <p><strong>Example of Replica Set:</strong></p>
+            <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image025.jpg" alt="Continuous Orchestration" style="width:60%" > 
+            <p><strong>When to use Replica Set:</strong></p>
+            <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image026.jpg" alt="Continuous Orchestration" style="width:100%" > 
+        </li>
+        <li><strong>Deployments: </strong>Deployment is a controller that transfers the current state into the intended state.
+            <p><strong>Why deployment is used?</strong></p>
+            <ul>
+                <li>Clean up older replica sets</li>
+                <li>Roll out a replica set</li>
+                <li>Declare the new state of pods</li>
+                <li>Indicate that a rollout is stuck</li>
+                <li>Apply multiple fixes to pods</li>
+                <li>Facilitate more load</li>
+            </ul>
+            <p><strong>Deployment Operations are:</strong></p>
+            <ul>
+                <li>Creating</li>
+                <li>Scaling</li>
+                <li>Updating</li>
+                <li>Cleaning</li>
+                <li>Rolling</li>
+                <li>Pausing and Resuming</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Services:</strong> A service is an abstraction that defines a logical set of pods as well as a policy for accessing them. These are defined in YAML.</p>
+            <p><strong>How do service work?</strong></p>
+            <p>A Kubernetes service allows internal and external users of your app to communicate with:</p>
+            <ul>
+                <li>Nodes</li>
+                <li>Pods</li>
+                <li>Users</li>
+            </ul>
+            <p><strong>Accessing a Kubernetes Service:</strong></p>
+            <ul>
+                <li><strong>DNS method:</strong> when a new service is established, the DNS server watches the Kubernetes API and it name become available for a quick resolution for requesting apps.</li>
+                <li><strong>Environment variable:</strong> The kubelet adds environment variables for each active service for each node a pod is operating on it this approach.</li>
+            </ul>
+            <p><strong>Service Types:</strong></p>
+            <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image027.jpg" alt="Continuous Orchestration" style="width:70%" > 
+            <ul>
+                <li><strong>ClusterIP:</strong> the default service type exposes the service within the Kubernetes cluster.</li>
+                <li><strong>NodePort:</strong> a static port exposes the service on each node’s IP.</li>
+                <li><strong>LoadBalancer:</strong> a cloud provider’s load balancer exposes the service externally.</li>
+                <li><strong>ExternalName:</strong> return a C name record with the value for mapping a service to a perset external name field.</li>
+            </ul>
+        </li>
+    </ol>
+    <p><br></p>
+    <!-- ====================================================== -->     
+    <h5 id="section_10_9">10.9.   Kubernetes Networking and Storage</h5>
+    <p><strong>Kubernetes Networking</strong> is a service that enables Kubernetes components to connect with one another.</p>
+    <p>The main concerns of Kubernetes networking are:</p>
+    <ul>
+        <li>Containers in a pod, communicating via loopback utilizing networking.</li>
+        <li>Services exclusively published for use within your cluster.</li>
+        <li>Cluster networking that allows communication across distinct pods.</li>
+        <li>The service resource that allows you to expose a pod-based application.</li>
+    </ul>
+    <p><strong>Kubernetes Storage:</strong> Kubernetes provides a convenient persistent storage mechanism called Persistent volumes. Persistent Volume – In the Kubernetes storage architecture, volumes are a crucial abstraction.</p>
+    <p><strong>How can we keep storage resource consumption to a minimum?</strong></p>
+    <p>Container storage usage should be limited to represent the amount of storage available in the local data center or the budge provided for cloud storage service. The two ways of limiting storage consumption by containers are:</p>
+    <ul>
+        <li><strong>Resource Quotas:</strong> Resource Quotas which limits the amount of resources, including storage, CPU and memory, that can be used by all containers within a Kubernetes.</li>
+        <li><strong>Storage Classes:</strong> Storage Classes which limits the amount of storage provisioned to containers in response to a PresistentVolumeClaim.</li>
+    </ul>
+    <p><strong>Kubernetes storage best practice,</strong></p>
+    <ul>
+        <li>Persistent volume settings</li>
+        <li>Resource quotas</li>
+        <li>Service definition quality</li>
+    </ul>
+    <p><br></p>
+    <!-- ====================================================== -->  
+    <h5 id="section_10_10">10.10.   Kubernetes Configuration</h5>
+    <p>Kubernetes uses two sorts of objects to inject configuration data into it, which are:</p>
+    <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image028.jpg" alt="Continuous Orchestration" style="width:100%" > 
+    <p><strong>Secrets:</strong> Secrets are little pieces of data, such as a password, a token, or a key that contain a small amount of sensitive information.</p>
+    <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image029.jpg" alt="Continuous Orchestration" style="width:100%" > 
+    <p><strong>ConfigMap:</strong> A ConfigMap is an API object used to store non-confidential data in key-value pairs.</p>
+    <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image030.jpg" alt="Continuous Orchestration" style="width:100%" > 
+    <p><strong>ConfigMap can be used by pods as:</strong></p>
+    <ul>
+        <li>Environment variable</li>
+        <li>Command-line parameters</li>
+        <li>Volume configuration file</li>
+    </ul>
+    <p><strong>Configuration best practices:</strong></p>
+    <ul>
+        <li>Update Kubernetes to the latest version</li>
+        <li>Use Pod Security Policies</li>
+        <li>Use Kubernetes namespace</li>
+        <li>Use Network Policies</li>
+        <li>Configure the Kubernetes API server security</li>
+        <li>Maintain Small container Image</li>
+    </ul>
+    <p><br></p>
+    <!-- ====================================================== -->        
+    <h5 id="section_10_11">10.11.   Interacting with a Kubernetes Cluster</h5>
+    <p>To manage your cluster, Kubernetes provides kubectl, a command-line tool. <br>
+        To transmit instructions to the cluster’s control plane, use kubectl, and to receive information about all Kubernetes object, use the API server.</p>
+        <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image031.jpg" alt="Continuous Orchestration" style="width:60%" > 
+        <p><strong>The syntax to run kubectl commands from the terminal window is:</strong></p>
+<pre class="code">
+kubectl [command] [TYPE] [NAME] [flags]
+</pre>   
+        <p>The arguments for the syntax are:</p>
+        <p><strong>Command:</strong> Refers to the operation</p>
+        <p><strong>TYPE:</strong> Refers to the resource type</p>
+        <p><strong>NAME:</strong> Refers to the resource name</p>
+        <p><strong>Flags:</strong> Refers to the optional flags. Initialize the cluster using this command:</p>     
+<pre class="code">
+sudo kubeadm init
+</pre> 
+        <p><br></p>
+    <!-- ====================================================== -->
+    <h5 id="section_10_12">10.12.   Demo - Exploring a Kube Cluster</h5>
+    <p><strong>In the CMD, three window, </strong></p>
+    <ol>
+        <li>master</li>
+        <li>worker1</li>
+        <li>worker2</li>
+    </ol>
+    <p><strong>In the “master” window, run the following command</strong></p>
+    <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image032.jpg" alt="Continuous Orchestration" style="width:100%" > 
+    <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image033.jpg" alt="Continuous Orchestration" style="width:100%" > 
+    <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image034.jpg" alt="Continuous Orchestration" style="width:100%" > 
+    <hr>
+    <p><strong>In the “worker” window, run the following command</strong></p>
+    <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image035.jpg" alt="Continuous Orchestration" style="width:100%" > 
+    <hr>
+    <p><strong>Now go again “master” window,</strong></p>
+    <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image036.jpg" alt="Continuous Orchestration" style="width:100%" > 
+    <img src="https://techntuts.com/html/devops/10_devops_kubernetes_files/image037.jpg" alt="Continuous Orchestration" style="width:100%" > 
+    <p><br></p>
+    <!-- ====================================================== -->
+    <h5 id="section_10_13">10.13.   Practice Project</h5>
+    <p><br></p>
+    <!-- ====================================================== --> 
+    <h6>1.  Deploy Angular Application in Docker Container</h6>
+    <p>Deploy the Angular application in Docker. The Angular application should be built with the Angular CLI along with Docker Compose for development and production.</p>
+    <p><strong>Problem Statement Scenario: </strong></p>
+    <p>HTQual Technology Solutions hired you as a MEAN Stack Developer. The organization decided to implement DevOps to develop and deliver the products. Since HTQual is an Agile organization, they follow Scrum methodology to develop the projects incrementally. The Company decided to develop their website on Mean stack. Since you are the MEAN stack developer, you have to demonstrate that deploying an Angular application on Docker is always a best approach to develop a project and test it incrementally. You agreed upon the following:</p>
+    <ul>
+        <li>Setting up an image for code development</li>
+        <li>Build the application in Docker and host it in Docker Hub</li>
+        <li>List the advantages, disadvantages, and document the tasks involved</li>
+    </ul>
+    <p>Your goal is to demonstrate the Angular application and run it in a Docker container.</p>
+    <p><strong>You must use the following tools: </strong></p>
+    <ul>
+        <li><strong>Docker</strong> – To package the application in a Docker container </li>
+        <li><strong>Node.js</strong> – To support the Angular application with the required node modules.</li>
+        <li><strong>Angular CLI</strong> – To execute and bundle the dependencies together.</li>
+        <li><strong>Linux (Ubuntu)</strong> – As a base operating system to start and execute the project.</li>
+    </ul>
+    <p><strong>Following requirements should be met:</strong></p>
+    <ul>
+        <li>Document the step-by-step process from the initial installation to the final production.</li>
+        <li>Run the Angular application successfully in the Docker container.</li>
+        <li>Use Docker Compose to manage the Angular application running inside the Docker container.</li>
+    </ul>
+    <p><br></p>
+    <!-- ====================================================== --> 
+    <h6>2.   Deployment of WordPress Application on Kubernetes</h6>
+    <p>Use Jenkins to deploy a WordPress application on Kubernetes.</p>
+    <p><strong>Description:</strong></p>
+    <p>
+        While developing a highly scalable application, real challenges come into picture during the deployment of that application into production or real time data scenarios. One of the biggest drawbacks for any product after development is having the application stuck while working in normal case scenarios in a real time production environment.
+        <br>
+        Your organization is adopting the DevOps methodology and in order to integrate CI into your existing developmental workflow, there’s a need to automate the deployment of a wordpress application in the production environment using a CI tool like Jenkins such that it can be load balanced and auto scaled easily depending on the traffic it can handle.
+        <br>
+        Kubernetes has become essential for standardising application components across complex development and production. With the increasing complexity of application ecosystems and the growing popularity of Kubernetes, tools that help manage resources within Kubernetes clusters have become essential.
+        <br>
+        Considering the organizational requirement, you are asked to deploy the wordpress application on a Kubernetes cluster while utilising the docker image for the wordpress application in the production environment.
+    </p>
+    <p><strong>Tools required:</strong> Git, GitHub, Jenkins, Docker and Kubernetes</p>
+    <p><strong>Expected Deliverables:</strong></p>
+    <ul>
+        <li>Establish a connection between Jenkins and Kubernetes</li>
+        <li>The build job should compile and run the code to deploy the application on Kubernetes.</li>
+    </ul>
+    <p><br></p>
+    <!-- ====================================================== -->                
+</body>
+</html>
